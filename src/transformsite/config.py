@@ -84,7 +84,8 @@ class EmailConfig(BaseModel):
 
 class ChannelsConfig(BaseModel):
     telegram: dict[str, Any] = Field(default_factory=dict)  # token_env, api_base
-    whatsapp: dict[str, Any] = Field(default_factory=dict)  # provider: evolution|cloud, ...
+    whatsapp: dict[str, Any] = Field(default_factory=dict)  # Evolution: base_url, instance, apikey_env
+    whatsapp_cloud: dict[str, Any] = Field(default_factory=dict)  # Cloud API: phone_number_id, token_env, verify_token
     email: dict[str, Any] = Field(default_factory=dict)
     web: dict[str, Any] = Field(default_factory=lambda: {"enabled": True})
 

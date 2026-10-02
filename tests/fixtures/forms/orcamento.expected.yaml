@@ -1,0 +1,27 @@
+# Gabarito manual (revisor humano) para orcamento.html: nome original do campo, tipo semântico e obrigatoriedade.
+form: orcamento.html
+slots:
+- name_original: nome
+  type: text
+  required: true
+- name_original: email
+  type: email
+  required: true
+- name_original: fone
+  type: phone_br
+  required: true
+- name_original: tipo_evento
+  type: enum
+  required: true
+- name_original: convidados
+  type: number
+  required: true
+- name_original: data_evento
+  type: date
+  required: true
+- name_original: orcamento_estimado
+  type: number
+  required: false
+- name_original: detalhes
+  type: text
+  required: false

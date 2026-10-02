@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS meta(k TEXT PRIMARY KEY, v TEXT);
 
 STOP = set(
     """a o e é de da do das dos que em um uma para por com no na nos nas se os as ao à
-    como qual quais quando onde quem eu você vc meu minha tem ter há sobre mais pra pro
+    como qual quais eu você vc meu minha tem ter há sobre mais pra pro
     me isso esse essa este esta the of to and is in what how""".split()
 )
 
@@ -166,17 +166,32 @@ class Index:
         for lst in lists:
             for rank, (cid, _s) in enumerate(lst):
                 fused[cid] = fused.get(cid, 0.0) + 1.0 / (60 + rank)
-        best = sorted(fused.items(), key=lambda x: -x[1])[: k * 2]
+        best = sorted(fused.items(), key=lambda x: -x[1])[: k * 3]
         hits = self.get([c for c, _ in best])
         out, per_url = [], {}
         vsim = dict(vec)
         for cid, s in best:
             h = hits[cid]
-            if per_url.get(h.url, 0) >= 2:  # diversidade: no máx. 2 trechos por página
+            if per_url.get(h.url, 0) >= 3:  # diversidade: no máx. 3 trechos por página
                 continue
             per_url[h.url] = per_url.get(h.url, 0) + 1
             h.score = vsim.get(cid, s)
             out.append(h)
             if len(out) >= k:
                 break
-        return out
+        return self._expand_top(out, k)
+
+    def _expand_top(self, out: list[Hit], k: int, max_page_chunks: int = 8, extra: int = 4) -> list[Hit]:
+        """Se a página do 1º resultado é curta, traz os demais trechos dela (ex.: seção "Para quem é")."""
+        if not out:
+            return out
+        url = out[0].url
+        rows = self.db.execute("SELECT id FROM chunks WHERE url=? ORDER BY id", (url,)).fetchall()
+        if len(rows) > max_page_chunks:
+            return out
+        have = {h.id for h in out}
+        missing = [r[0] for r in rows if r[0] not in have][:extra]
+        more = self.get(missing)
+        # insere logo após os trechos dessa página, antes das demais
+        pos = max(i for i, h in enumerate(out) if h.url == url) + 1
+        return out[:pos] + [more[i] for i in missing if i in more] + out[pos:]

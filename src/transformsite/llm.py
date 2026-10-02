@@ -97,22 +97,33 @@ class LLM:
         }
         if json_mode:
             body["format"] = "json"
-        try:
-            r = httpx.post(f"{self.cfg.base_url.rstrip('/')}/api/chat", json=body, timeout=self.cfg.timeout)
-            r.raise_for_status()
-        except httpx.HTTPError as e:
-            raise LLMError(f"ollama: {e}") from e
+        r = self._post_retry(f"{self.cfg.base_url.rstrip('/')}/api/chat", body, "ollama")
         return r.json()["message"]["content"]
+
+    def _post_retry(self, url: str, body: dict, label: str, attempts: int = 4) -> httpx.Response:
+        """POST com nova tentativa em erro 5xx/conexão (ex.: Ollama recarregando o modelo)."""
+        import time
+
+        last: Exception | None = None
+        for i in range(attempts):
+            try:
+                r = httpx.post(url, json=body, timeout=self.cfg.timeout)
+                if r.status_code < 500:
+                    r.raise_for_status()
+                    return r
+                last = httpx.HTTPStatusError(f"{r.status_code}: {r.text[:200]}", request=r.request, response=r)
+            except (httpx.ConnectError, httpx.ReadTimeout, httpx.RemoteProtocolError) as e:
+                last = e
+            except httpx.HTTPError as e:
+                raise LLMError(f"{label}: {e}") from e
+            time.sleep(min(2 * 2**i, 15))
+        raise LLMError(f"{label}: {last}")
 
     def _openai_chat(self, messages, json_mode):
         body: dict[str, Any] = {"model": self.cfg.model, "messages": messages, "temperature": self.cfg.temperature}
         if json_mode:
             body["response_format"] = {"type": "json_object"}
-        try:
-            r = httpx.post(f"{self.cfg.base_url.rstrip('/')}/chat/completions", json=body, timeout=self.cfg.timeout)
-            r.raise_for_status()
-        except httpx.HTTPError as e:
-            raise LLMError(f"openai_compat: {e}") from e
+        r = self._post_retry(f"{self.cfg.base_url.rstrip('/')}/chat/completions", body, "openai_compat")
         return r.json()["choices"][0]["message"]["content"]
 
     def _cli_chat(self, messages, json_mode):
@@ -158,20 +169,10 @@ class LLM:
             batch = texts[i : i + 32]
             try:
                 if p == "ollama":
-                    r = httpx.post(
-                        f"{self.cfg.base_url.rstrip('/')}/api/embed",
-                        json={"model": self.cfg.embed_model, "input": batch},
-                        timeout=self.cfg.timeout,
-                    )
-                    r.raise_for_status()
+                    r = self._post_retry(f"{self.cfg.base_url.rstrip('/')}/api/embed", {"model": self.cfg.embed_model, "input": batch}, "embed")
                     out.extend(r.json()["embeddings"])
                 else:
-                    r = httpx.post(
-                        f"{self.cfg.base_url.rstrip('/')}/embeddings",
-                        json={"model": self.cfg.embed_model, "input": batch},
-                        timeout=self.cfg.timeout,
-                    )
-                    r.raise_for_status()
+                    r = self._post_retry(f"{self.cfg.base_url.rstrip('/')}/embeddings", {"model": self.cfg.embed_model, "input": batch}, "embed")
                     out.extend(d["embedding"] for d in r.json()["data"])
             except httpx.HTTPError as e:
                 raise LLMError(f"embed: {e}") from e

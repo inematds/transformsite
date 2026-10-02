@@ -1,0 +1,27 @@
+# Gabarito manual (revisor humano) para matricula_curso.html: nome original do campo, tipo semântico e obrigatoriedade.
+form: matricula_curso.html
+slots:
+- name_original: aluno[nome]
+  type: text
+  required: true
+- name_original: aluno[cpf]
+  type: cpf
+  required: true
+- name_original: aluno[nascimento]
+  type: date
+  required: true
+- name_original: aluno[email]
+  type: email
+  required: true
+- name_original: responsavel[nome]
+  type: text
+  required: false
+- name_original: responsavel[telefone]
+  type: phone_br
+  required: false
+- name_original: curso
+  type: enum
+  required: true
+- name_original: turno
+  type: enum
+  required: true

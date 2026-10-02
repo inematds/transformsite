@@ -1,0 +1,15 @@
+# Gabarito manual (revisor humano) para segunda_via_boleto.html: nome original do campo, tipo semântico e obrigatoriedade.
+form: segunda_via_boleto.html
+slots:
+- name_original: txtCPF
+  type: cpf
+  required: true
+- name_original: txtUnidade
+  type: text
+  required: true
+- name_original: ddlMes
+  type: enum
+  required: true
+- name_original: txtEmail
+  type: email
+  required: false

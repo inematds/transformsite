@@ -228,3 +228,26 @@ def test_cli_validate_ok(project, capsys):
         cli.main(["-C", str(project.root), "validate"])
     assert e.value.code == 0
     assert "0 erro(s)" in capsys.readouterr().out
+
+
+def test_action_args_use_raw_enum_values(project):
+    """Rótulos são para o cliente; o sistema legado recebe o valor bruto do enum."""
+    from transformsite.engine import Agent
+    from transformsite.messages import InMsg
+    from transformsite.tools import default_registry
+
+    seen = {}
+    reg = default_registry(project)
+    reg.add("teste.capturar", lambda ctx, **a: seen.update(a) or {"id": "X"}, side_effects=True)
+    svc = Service(
+        service="teste_raw", review="approved", intent={"description": "t", "examples": ["quero testar"]},
+        slots=[{"name": "assunto", "type": "enum", "values": ["reclamacao"], "labels": {"reclamacao": "Reclamação"}, "prompt": "?"}],
+        confirm={"template": "Envio {assunto}?"},
+        action={"tool": "teste.capturar", "args": {"campo": "{assunto}"}, "idempotency_key": "{session_id}"},
+    )
+    agent = Agent(project, store=Store(project.db_path), registry=reg, services={"teste_raw": svc})
+    outs = agent.handle(InMsg("cli", "u", "quero testar"))
+    outs = agent.handle(InMsg("cli", "u", "1"))
+    assert "Envio Reclamação?" in outs[-1].text
+    agent.handle(InMsg("cli", "u", "sim"))
+    assert seen == {"campo": "reclamacao"}

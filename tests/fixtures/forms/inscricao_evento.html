@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Inscrição - Semana de Inovação 2027</title></head>
+<body>
+<section>
+  <h2>Inscrição no evento</h2>
+  <form action="https://eventos.inovasul.org/inscricao" method="post">
+    <label for="nome">Nome para o crachá</label>
+    <input id="nome" name="nome_cracha" type="text" required maxlength="40">
+    <label for="mail">E-mail</label>
+    <input id="mail" name="email" type="email" required>
+    <label for="whats">WhatsApp</label>
+    <input id="whats" name="whatsapp" type="text">
+    <label for="org">Empresa / instituição</label>
+    <input id="org" name="empresa" type="text">
+    <label for="trilha">Trilha de interesse</label>
+    <select id="trilha" name="trilha" required>
+      <option value="ia">Inteligência Artificial</option>
+      <option value="agro">Agrotech</option>
+      <option value="saude">Saúde digital</option>
+    </select>
+    <label for="camiseta">Tamanho da camiseta</label>
+    <select id="camiseta" name="camiseta">
+      <option>P</option><option>M</option><option>G</option><option>GG</option>
+    </select>
+    <label>
+      <input type="checkbox" name="aceite_lgpd" value="1" required>
+      Li e aceito a política de privacidade
+    </label>
+    <label>
+      <input type="checkbox" name="receber_novidades" value="sim">
+      Quero receber novidades por e-mail
+    </label>
+    <button>Inscrever</button>
+  </form>
+</section>
+</body>
+</html>

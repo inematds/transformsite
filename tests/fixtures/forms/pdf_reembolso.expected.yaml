@@ -1,0 +1,24 @@
+# Gabarito manual (revisor humano) para pdf_reembolso.pdf: nome original do campo, tipo semântico e obrigatoriedade.
+form: pdf_reembolso.pdf
+slots:
+- name_original: Text1
+  type: text
+  required: true
+- name_original: Text2
+  type: text
+  required: true
+- name_original: tipo_despesa
+  type: enum
+  required: true
+- name_original: valor_total
+  type: number
+  required: true
+- name_original: data_despesa
+  type: date
+  required: true
+- name_original: obs
+  type: text
+  required: false
+- name_original: comprovantes_anexados
+  type: yes_no
+  required: false

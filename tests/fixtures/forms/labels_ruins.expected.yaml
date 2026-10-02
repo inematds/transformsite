@@ -1,0 +1,30 @@
+# Gabarito manual (revisor humano) para labels_ruins.html: nome original do campo, tipo semântico e obrigatoriedade.
+form: labels_ruins.html
+slots:
+- name_original: f1
+  type: text
+  required: true
+- name_original: f2
+  type: email
+  required: true
+- name_original: f3
+  type: phone_br
+  required: false
+- name_original: f4
+  type: text
+  required: false
+- name_original: f5
+  type: date
+  required: false
+- name_original: f6
+  type: enum
+  required: false
+- name_original: f7
+  type: number
+  required: false
+- name_original: f8
+  type: text
+  required: false
+- name_original: f9
+  type: cep
+  required: false

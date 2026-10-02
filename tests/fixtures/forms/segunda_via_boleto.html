@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>2ª via de boleto - Condomínio Jardins</title></head>
+<body>
+<div class="container">
+  <h2>Segunda via de boleto</h2>
+  <form method="post" action="https://adm.condominiojardins.com.br/financeiro/2via.asp">
+    <input type="hidden" name="__RequestVerificationToken" value="CfDJ8N">
+    <table>
+      <tr>
+        <td>CPF do titular:</td>
+        <td><input type="text" name="txtCPF" required maxlength="14"></td>
+      </tr>
+      <tr>
+        <td>Unidade (bloco/apto):</td>
+        <td><input type="text" name="txtUnidade" required></td>
+      </tr>
+      <tr>
+        <td>Mês de referência:</td>
+        <td>
+          <select name="ddlMes">
+            <option value="01">Janeiro</option><option value="02">Fevereiro</option>
+            <option value="03">Março</option><option value="04">Abril</option>
+            <option value="05">Maio</option><option value="06">Junho</option>
+            <option value="07">Julho</option><option value="08">Agosto</option>
+            <option value="09">Setembro</option><option value="10">Outubro</option>
+            <option value="11">Novembro</option><option value="12">Dezembro</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>E-mail para envio:</td>
+        <td><input type="text" name="txtEmail"></td>
+      </tr>
+    </table>
+    <input type="submit" name="btnGerar" value="Gerar boleto">
+  </form>
+</div>
+</body>
+</html>

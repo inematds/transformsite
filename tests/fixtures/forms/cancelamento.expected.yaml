@@ -1,0 +1,27 @@
+# Gabarito manual (revisor humano) para cancelamento.html: nome original do campo, tipo semântico e obrigatoriedade.
+form: cancelamento.html
+slots:
+- name_original: num_contrato
+  type: text
+  required: true
+- name_original: cpf_titular
+  type: cpf
+  required: true
+- name_original: motivo
+  type: enum
+  required: true
+- name_original: motivo_outro
+  type: text
+  required: false
+- name_original: cep_novo
+  type: cep
+  required: false
+- name_original: aceita_oferta
+  type: yes_no
+  required: false
+- name_original: data_cancelamento
+  type: date
+  required: false
+- name_original: comentarios
+  type: text
+  required: false

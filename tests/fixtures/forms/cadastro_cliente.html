@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Cadastro de cliente - Loja Material Elétrico Luz</title></head>
+<body>
+<h1>Cadastro de cliente</h1>
+<form action="https://loja.materialluz.com.br/cliente/cadastrar" method="post">
+  <fieldset>
+    <legend>Identificação</legend>
+    <label for="nm">Nome / Razão social</label>
+    <input id="nm" name="nome" required>
+    <label for="doc">CPF</label>
+    <input id="doc" name="cpf" required pattern="[0-9]{11}" title="Somente números">
+    <label for="cel">Celular</label>
+    <input id="cel" name="celular" required>
+    <label for="em">E-mail</label>
+    <input id="em" name="email" type="email">
+  </fieldset>
+  <fieldset>
+    <legend>Endereço de entrega</legend>
+    <label for="cep">CEP</label>
+    <input id="cep" name="cep" required pattern="\d{5}-?\d{3}" maxlength="9">
+    <label for="log">Logradouro</label>
+    <input id="log" name="logradouro" required>
+    <label for="num">Número</label>
+    <input id="num" name="numero" required>
+    <label for="comp">Complemento</label>
+    <input id="comp" name="complemento">
+    <label for="bai">Bairro</label>
+    <input id="bai" name="bairro" required>
+    <label for="cid">Cidade</label>
+    <input id="cid" name="cidade" required>
+    <label for="uf">UF</label>
+    <select id="uf" name="uf" required>
+      <option value="RS">RS</option><option value="SC">SC</option><option value="PR">PR</option><option value="SP">SP</option>
+    </select>
+  </fieldset>
+  <button type="submit">Cadastrar</button>
+</form>
+</body>
+</html>

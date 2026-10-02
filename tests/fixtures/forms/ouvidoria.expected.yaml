@@ -1,0 +1,21 @@
+# Gabarito manual (revisor humano) para ouvidoria.html: nome original do campo, tipo semântico e obrigatoriedade.
+form: ouvidoria.html
+slots:
+- name_original: tipo
+  type: enum
+  required: true
+- name_original: identificar
+  type: enum
+  required: true
+- name_original: nome
+  type: text
+  required: false
+- name_original: email
+  type: email
+  required: false
+- name_original: secretaria
+  type: enum
+  required: false
+- name_original: relato
+  type: text
+  required: true

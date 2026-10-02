@@ -1,0 +1,21 @@
+# Gabarito manual (revisor humano) para pdf_chapado_visita.pdf: nome original do campo, tipo semântico e obrigatoriedade.
+form: pdf_chapado_visita.pdf
+slots:
+- name_original: Nome
+  type: text
+  required: true
+- name_original: Telefone
+  type: phone_br
+  required: true
+- name_original: E-mail
+  type: email
+  required: true
+- name_original: Endereço da obra
+  type: text
+  required: true
+- name_original: CEP
+  type: cep
+  required: true
+- name_original: Data preferida
+  type: date
+  required: true

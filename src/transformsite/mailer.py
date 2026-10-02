@@ -12,7 +12,7 @@ from pathlib import Path
 from .config import ProjectConfig
 
 
-def send_email(cfg: ProjectConfig, to: str, subject: str, body: str, attachments: list[tuple[str, bytes, str]] | None = None, reply_to: str | None = None) -> dict:
+def send_email(cfg: ProjectConfig, to: str, subject: str, body: str, attachments: list[tuple[str, bytes, str]] | None = None, reply_to: str | None = None, in_reply_to: str | None = None) -> dict:
     msg = EmailMessage()
     msg["From"] = cfg.email.smtp_from or f"{cfg.name}@localhost"
     msg["To"] = to
@@ -20,6 +20,9 @@ def send_email(cfg: ProjectConfig, to: str, subject: str, body: str, attachments
     msg["Message-ID"] = f"<{uuid.uuid4().hex}@transformsite>"
     if reply_to:
         msg["Reply-To"] = reply_to
+    if in_reply_to:  # agrupa na mesma thread do cliente de e-mail
+        msg["In-Reply-To"] = in_reply_to
+        msg["References"] = in_reply_to
     msg.set_content(body)
     for name, data, mime in attachments or []:
         maintype, subtype = mime.split("/", 1)

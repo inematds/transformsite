@@ -1,0 +1,27 @@
+# Gabarito manual (revisor humano) para inscricao_evento.html: nome original do campo, tipo semântico e obrigatoriedade.
+form: inscricao_evento.html
+slots:
+- name_original: nome_cracha
+  type: text
+  required: true
+- name_original: email
+  type: email
+  required: true
+- name_original: whatsapp
+  type: phone_br
+  required: false
+- name_original: empresa
+  type: text
+  required: false
+- name_original: trilha
+  type: enum
+  required: true
+- name_original: camiseta
+  type: enum
+  required: false
+- name_original: aceite_lgpd
+  type: yes_no
+  required: true
+- name_original: receber_novidades
+  type: yes_no
+  required: false

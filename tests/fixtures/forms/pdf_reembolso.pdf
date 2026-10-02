@@ -1,0 +1,221 @@
+%PDF-1.3
+%âãÏÓ
+1 0 obj
+<<
+/Producer (pypdf)
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Count 1
+/Kids [ 4 0 R ]
+>>
+endobj
+3 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+/AcroForm <<
+/Fields [ 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 14 0 R ]
+/NeedAppearances true
+/DA (\057F1 10 Tf 0 g)
+/DR <<
+/Font <<
+/F1 5 0 R
+>>
+>>
+>>
+>>
+endobj
+4 0 obj
+<<
+/Type /Page
+/Resources <<
+/Font <<
+/F1 5 0 R
+>>
+>>
+/MediaBox [ 0.0 0.0 612 792 ]
+/Parent 2 0 R
+/Contents 15 0 R
+/Annots [ 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 14 0 R ]
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+>>
+endobj
+6 0 obj
+<<
+/Type /Annot
+/Subtype /Widget
+/Rect [ 220 705 560 723 ]
+/P 4 0 R
+/F 4
+/FT /Tx
+/T (Text1)
+/Ff 2
+/DA (\057F1 10 Tf 0 g)
+/TU (Nome do colaborador)
+>>
+endobj
+7 0 obj
+<<
+/Type /Annot
+/Subtype /Widget
+/Rect [ 220 680 560 698 ]
+/P 4 0 R
+/F 4
+/FT /Tx
+/T (Text2)
+/Ff 2
+/DA (\057F1 10 Tf 0 g)
+/TU (Matr\355cula funcional)
+/MaxLen 8
+>>
+endobj
+8 0 obj
+<<
+/Type /Annot
+/Subtype /Widget
+/Rect [ 220 655 560 673 ]
+/P 4 0 R
+/F 4
+/FT /Ch
+/T (tipo\137despesa)
+/Ff 2
+/Opt [ [ (transp) (Transporte) ] [ (alim) (Alimenta\347\343o) ] [ (hosp) (Hospedagem) ] [ (outros) (Outros) ] ]
+/DA (\057F1 10 Tf 0 g)
+/TU (Tipo de despesa)
+>>
+endobj
+9 0 obj
+<<
+/Type /Annot
+/Subtype /Widget
+/Rect [ 220 630 560 648 ]
+/P 4 0 R
+/F 4
+/FT /Tx
+/T (valor\137total)
+/Ff 2
+/DA (\057F1 10 Tf 0 g)
+/TU (Valor total da despesa)
+>>
+endobj
+10 0 obj
+<<
+/Type /Annot
+/Subtype /Widget
+/Rect [ 220 605 560 623 ]
+/P 4 0 R
+/F 4
+/FT /Tx
+/T (data\137despesa)
+/Ff 2
+/DA (\057F1 10 Tf 0 g)
+/TU (Data da despesa)
+>>
+endobj
+11 0 obj
+<<
+/Type /Annot
+/Subtype /Widget
+/Rect [ 220 580 560 598 ]
+/P 4 0 R
+/F 4
+/FT /Tx
+/T (obs)
+/Ff 0
+/DA (\057F1 10 Tf 0 g)
+>>
+endobj
+12 0 obj
+<<
+/Type /XObject
+/Subtype /Form
+/BBox [ 0.0 0.0 12 12 ]
+/Length 14
+>>
+stream
+0 0 12 12 re f
+endstream
+endobj
+13 0 obj
+<<
+/Type /XObject
+/Subtype /Form
+/BBox [ 0.0 0.0 12 12 ]
+/Length 0
+>>
+stream
+
+endstream
+endobj
+14 0 obj
+<<
+/Type /Annot
+/Subtype /Widget
+/Rect [ 50 557 62 569 ]
+/P 4 0 R
+/F 4
+/FT /Btn
+/T (comprovantes\137anexados)
+/Ff 0
+/V /Off
+/AS /Off
+/AP <<
+/N <<
+/Sim 12 0 R
+/Off 13 0 R
+>>
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 406
+>>
+stream
+BT /F1 16 Tf 50 740 Td (Solicitação de Reembolso de Despesas) Tj ET
+BT /F1 11 Tf 50 710 Td (Nome do colaborador:) Tj ET
+BT /F1 11 Tf 50 685 Td (Matrícula:) Tj ET
+BT /F1 11 Tf 50 660 Td (Tipo de despesa:) Tj ET
+BT /F1 11 Tf 50 635 Td (Valor total \(R$\):) Tj ET
+BT /F1 11 Tf 50 610 Td (Data da despesa:) Tj ET
+BT /F1 11 Tf 50 585 Td (Observações:) Tj ET
+BT /F1 11 Tf 70 560 Td (Anexei os comprovantes) Tj ET
+endstream
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000015 00000 n 
+0000000054 00000 n 
+0000000113 00000 n 
+0000000312 00000 n 
+0000000502 00000 n 
+0000000599 00000 n 
+0000000764 00000 n 
+0000000942 00000 n 
+0000001225 00000 n 
+0000001402 00000 n 
+0000001574 00000 n 
+0000001712 00000 n 
+0000001831 00000 n 
+0000001935 00000 n 
+0000002130 00000 n 
+trailer
+<<
+/Size 16
+/Root 3 0 R
+/Info 1 0 R
+>>
+startxref
+2588
+%%EOF

@@ -1,0 +1,18 @@
+# Gabarito manual (revisor humano) para contato.html: nome original do campo, tipo semântico e obrigatoriedade.
+form: contato.html
+slots:
+- name_original: nome
+  type: text
+  required: true
+- name_original: email
+  type: email
+  required: true
+- name_original: telefone
+  type: phone_br
+  required: false
+- name_original: assunto
+  type: enum
+  required: true
+- name_original: mensagem
+  type: text
+  required: true

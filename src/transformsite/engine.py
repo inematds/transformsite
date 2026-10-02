@@ -416,11 +416,12 @@ class Agent:
     def _tctx(self, sess, svc) -> ToolContext:
         return ToolContext(self.cfg, self.store, sess, svc.service)
 
-    def _ctx(self, sess, svc, state, result: dict | None = None) -> dict:
+    def _ctx(self, sess, svc, state, result: dict | None = None, labels: bool = True) -> dict:
+        """Contexto dos templates. `labels=False` mantém os valores brutos (para ações/sistemas legados)."""
         ctx: dict[str, Any] = {}
         for k, v in state["slots"].items():
             s = svc.slot(k)
-            if s and s.type == "enum" and s.labels:
+            if labels and s and s.type == "enum" and s.labels:
                 ctx[k] = s.labels.get(v, v)
             else:
                 ctx[k] = v
@@ -718,10 +719,11 @@ class Agent:
     def _execute(self, sess, svc: Service, state) -> list[OutMsg]:
         sid = sess["id"]
         ctx = self._ctx(sess, svc, state)
+        raw = self._ctx(sess, svc, state, labels=False)
         result: dict = {}
         if svc.action:
-            args = render(svc.action.args, ctx)
-            idem = render(svc.action.idempotency_key, ctx) if svc.action.idempotency_key else None
+            args = render(svc.action.args, raw)
+            idem = render(svc.action.idempotency_key, raw) if svc.action.idempotency_key else None
             prev = self.store.action_done(f"{svc.service}:{idem}") if idem else None
             try:
                 if prev is not None:

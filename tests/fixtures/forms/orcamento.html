@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Solicite um orçamento - Buffet Sabor &amp; Arte</title></head>
+<body>
+<h1>Orçamento para eventos</h1>
+<form action="/orcamento/enviar" method="post">
+  <label for="n">Seu nome</label>
+  <input id="n" name="nome" required>
+  <label for="e">E-mail</label>
+  <input id="e" name="email" type="email" required>
+  <label for="f">Telefone</label>
+  <input id="f" name="fone" type="tel" required>
+  <label for="tipo">Tipo de evento</label>
+  <select id="tipo" name="tipo_evento" required>
+    <option value="casamento">Casamento</option>
+    <option value="aniversario">Aniversário</option>
+    <option value="corporativo">Corporativo</option>
+    <option value="formatura">Formatura</option>
+  </select>
+  <label for="conv">Número de convidados</label>
+  <input id="conv" name="convidados" type="number" min="10" max="800" required>
+  <label for="data">Data do evento</label>
+  <input id="data" name="data_evento" type="date" required>
+  <label for="orc">Orçamento estimado (R$)</label>
+  <input id="orc" name="orcamento_estimado" type="number" step="100">
+  <label for="det">Detalhes</label>
+  <textarea id="det" name="detalhes"></textarea>
+  <button>Pedir orçamento</button>
+</form>
+</body>
+</html>

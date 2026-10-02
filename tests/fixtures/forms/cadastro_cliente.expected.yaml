@@ -1,0 +1,36 @@
+# Gabarito manual (revisor humano) para cadastro_cliente.html: nome original do campo, tipo semântico e obrigatoriedade.
+form: cadastro_cliente.html
+slots:
+- name_original: nome
+  type: text
+  required: true
+- name_original: cpf
+  type: cpf
+  required: true
+- name_original: celular
+  type: phone_br
+  required: true
+- name_original: email
+  type: email
+  required: false
+- name_original: cep
+  type: cep
+  required: true
+- name_original: logradouro
+  type: text
+  required: true
+- name_original: numero
+  type: text
+  required: true
+- name_original: complemento
+  type: text
+  required: false
+- name_original: bairro
+  type: text
+  required: true
+- name_original: cidade
+  type: text
+  required: true
+- name_original: uf
+  type: enum
+  required: true

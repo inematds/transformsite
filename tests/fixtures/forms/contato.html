@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Fale Conosco | Construtora Horizonte</title></head>
+<body>
+<header>
+  <form action="/busca" method="get" role="search">
+    <input type="search" name="q" placeholder="Buscar no site">
+    <button>Buscar</button>
+  </form>
+</header>
+<main>
+  <h1>Fale Conosco</h1>
+  <p>Preencha o formulário e retornaremos em até 2 dias úteis.</p>
+  <form action="https://www.construtorahorizonte.com.br/contato/enviar.php" method="post" id="form-contato">
+    <input type="hidden" name="csrf_token" value="a8f9e7d6c5">
+    <input type="hidden" name="origem" value="site">
+    <div class="campo">
+      <label for="nome">Nome completo *</label>
+      <input type="text" id="nome" name="nome" required maxlength="120">
+    </div>
+    <div class="campo">
+      <label for="email">E-mail *</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="campo">
+      <label for="tel">Telefone</label>
+      <input type="tel" id="tel" name="telefone" placeholder="(51) 99999-9999">
+    </div>
+    <div class="campo">
+      <label for="assunto">Assunto *</label>
+      <select id="assunto" name="assunto" required>
+        <option value="">Selecione...</option>
+        <option value="duvida">Dúvida</option>
+        <option value="elogio">Elogio</option>
+        <option value="reclamacao">Reclamação</option>
+        <option value="trabalhe">Trabalhe conosco</option>
+      </select>
+    </div>
+    <div class="campo">
+      <label for="msg">Mensagem *</label>
+      <textarea id="msg" name="mensagem" rows="6" required maxlength="2000"></textarea>
+    </div>
+    <div style="display:none"><input type="text" name="website" tabindex="-1"></div>
+    <button type="submit">Enviar</button>
+  </form>
+</main>
+<footer>
+  <form action="/newsletter" method="post">
+    <input type="email" name="news_email" placeholder="Seu e-mail">
+    <button>Assinar</button>
+  </form>
+</footer>
+</body>
+</html>

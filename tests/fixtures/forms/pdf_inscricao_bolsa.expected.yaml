@@ -1,0 +1,30 @@
+# Gabarito manual (revisor humano) para pdf_inscricao_bolsa.pdf: nome original do campo, tipo semântico e obrigatoriedade.
+form: pdf_inscricao_bolsa.pdf
+slots:
+- name_original: nome_completo
+  type: text
+  required: true
+- name_original: cpf
+  type: cpf
+  required: true
+- name_original: data_nasc
+  type: date
+  required: true
+- name_original: email
+  type: email
+  required: true
+- name_original: celular
+  type: phone_br
+  required: false
+- name_original: curso
+  type: enum
+  required: true
+- name_original: turno
+  type: enum
+  required: true
+- name_original: renda_familiar
+  type: number
+  required: true
+- name_original: declaracao
+  type: yes_no
+  required: true

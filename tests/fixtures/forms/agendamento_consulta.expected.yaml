@@ -1,0 +1,27 @@
+# Gabarito manual (revisor humano) para agendamento_consulta.html: nome original do campo, tipo semântico e obrigatoriedade.
+form: agendamento_consulta.html
+slots:
+- name_original: paciente_nome
+  type: text
+  required: true
+- name_original: paciente_cpf
+  type: cpf
+  required: true
+- name_original: dt_nasc
+  type: date
+  required: true
+- name_original: celular
+  type: phone_br
+  required: true
+- name_original: especialidade
+  type: enum
+  required: true
+- name_original: convenio
+  type: enum
+  required: false
+- name_original: data_hora_pref
+  type: datetime
+  required: true
+- name_original: obs
+  type: text
+  required: false

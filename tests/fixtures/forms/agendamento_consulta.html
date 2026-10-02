@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Clínica Vida Plena</title></head>
+<body>
+<h1>Agendamento de Consulta</h1>
+<form action="https://agenda.clinicavidaplena.com.br/agendar" method="POST">
+  <p>
+    <label>Nome do paciente <input type="text" name="paciente_nome" required></label>
+  </p>
+  <p>
+    <label>CPF <input type="text" name="paciente_cpf" required pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"></label>
+  </p>
+  <p>
+    <label>Data de nascimento <input type="date" name="dt_nasc" required></label>
+  </p>
+  <p>
+    <label>Celular (WhatsApp) <input type="tel" name="celular" required></label>
+  </p>
+  <p>
+    <label>Especialidade
+      <select name="especialidade" required>
+        <option value="">-- escolha --</option>
+        <option value="clinico">Clínico geral</option>
+        <option value="cardio">Cardiologia</option>
+        <option value="derma">Dermatologia</option>
+        <option value="pediatria">Pediatria</option>
+      </select>
+    </label>
+  </p>
+  <p>
+    <label>Convênio
+      <select name="convenio">
+        <option value="particular">Particular</option>
+        <option value="unimed">Unimed</option>
+        <option value="ipe">IPE Saúde</option>
+      </select>
+    </label>
+  </p>
+  <p>
+    <label>Data e horário preferidos <input type="datetime-local" name="data_hora_pref" required></label>
+  </p>
+  <p>
+    <label>Observações <textarea name="obs" maxlength="500"></textarea></label>
+  </p>
+  <input type="submit" value="Solicitar agendamento">
+</form>
+</body>
+</html>

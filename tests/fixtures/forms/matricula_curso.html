@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Escola Técnica Progresso - Matrícula</title></head>
+<body>
+<form action="https://secretaria.etprogresso.edu.br/matricula/nova" method="post" aria-label="Matrícula em curso técnico">
+  <fieldset>
+    <legend>Dados do aluno</legend>
+    <label for="a_nome">Nome</label>
+    <input id="a_nome" name="aluno[nome]" type="text" required>
+    <label for="a_cpf">CPF</label>
+    <input id="a_cpf" name="aluno[cpf]" type="text" required maxlength="14">
+    <label for="a_nasc">Nascimento</label>
+    <input id="a_nasc" name="aluno[nascimento]" type="date" required>
+    <label for="a_email">E-mail</label>
+    <input id="a_email" name="aluno[email]" type="email" required>
+  </fieldset>
+  <fieldset>
+    <legend>Responsável (se menor de idade)</legend>
+    <label for="r_nome">Nome</label>
+    <input id="r_nome" name="responsavel[nome]" type="text">
+    <label for="r_tel">Telefone</label>
+    <input id="r_tel" name="responsavel[telefone]" type="tel">
+  </fieldset>
+  <fieldset>
+    <legend>Curso</legend>
+    <label for="curso">Curso desejado</label>
+    <select id="curso" name="curso" required>
+      <option value="">Selecione</option>
+      <option value="TI">Técnico em Informática</option>
+      <option value="ENF">Técnico em Enfermagem</option>
+      <option value="ADM">Técnico em Administração</option>
+    </select>
+    <label for="turno">Turno</label>
+    <select id="turno" name="turno" required>
+      <option value="manha">Manhã</option>
+      <option value="tarde">Tarde</option>
+      <option value="noite">Noite</option>
+    </select>
+  </fieldset>
+  <button type="submit">Matricular</button>
+</form>
+</body>
+</html>

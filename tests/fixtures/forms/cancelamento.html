@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Cancelamento de plano - NetFibra</title></head>
+<body>
+<h1>Cancelamento de plano</h1>
+<form action="https://minha.netfibra.com.br/cancelamento" method="post">
+  <label for="contrato">Número do contrato</label>
+  <input id="contrato" name="num_contrato" required pattern="[0-9]{6,10}">
+  <label for="cpf">CPF do titular</label>
+  <input id="cpf" name="cpf_titular" required>
+  <label for="motivo">Motivo do cancelamento</label>
+  <select id="motivo" name="motivo" required>
+    <option value="">Selecione</option>
+    <option value="preco">Preço</option>
+    <option value="mudanca">Mudança de endereço</option>
+    <option value="qualidade">Qualidade da conexão</option>
+    <option value="outro">Outro</option>
+  </select>
+  <div class="cond" data-show-if="motivo=outro">
+    <label for="outro">Descreva o motivo</label>
+    <textarea id="outro" name="motivo_outro" maxlength="500"></textarea>
+  </div>
+  <div class="cond" data-depends-on="motivo=mudanca">
+    <label for="cepnovo">CEP do novo endereço</label>
+    <input id="cepnovo" name="cep_novo">
+  </div>
+  <div id="retencao" style="display:none">
+    <label for="oferta">Aceita conhecer uma oferta de desconto?</label>
+    <input type="checkbox" id="oferta" name="aceita_oferta" value="S">
+  </div>
+  <label for="data">Data desejada para o cancelamento</label>
+  <input id="data" name="data_cancelamento" type="date">
+  <label for="coment">Comentários</label>
+  <textarea id="coment" name="comentarios"></textarea>
+  <button>Solicitar cancelamento</button>
+</form>
+<script>
+  document.getElementById('motivo').addEventListener('change', function (e) {
+    document.getElementById('retencao').style.display = e.target.value === 'preco' ? 'block' : 'none';
+  });
+</script>
+</body>
+</html>
