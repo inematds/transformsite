@@ -9,7 +9,7 @@ from __future__ import annotations
 import os
 import re
 import uuid
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 import httpx
 
@@ -84,7 +84,7 @@ def ics(uid: str, start: datetime, minutes: int, title: str, org: str) -> bytes:
     f = "%Y%m%dT%H%M%S"
     return (
         "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//transformsite//PT\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\n"
-        f"UID:{uid}@transformsite\r\nDTSTAMP:{datetime.utcnow():{f}}Z\r\nDTSTART:{start:{f}}\r\nDTEND:{end:{f}}\r\n"
+        f"UID:{uid}@transformsite\r\nDTSTAMP:{datetime.now(timezone.utc):{f}}Z\r\nDTSTART:{start:{f}}\r\nDTEND:{end:{f}}\r\n"
         f"SUMMARY:{title}\r\nORGANIZER:{org}\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
     ).encode()
 

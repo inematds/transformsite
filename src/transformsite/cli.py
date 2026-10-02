@@ -52,7 +52,11 @@ def cmd_init(args):
     dest.mkdir(parents=True, exist_ok=True)
     copy(tpl, dest)
     if not (dest / ".env").exists() and (dest / ".env.example").exists():
-        shutil.copy(dest / ".env.example", dest / ".env")
+        import secrets
+
+        env = (dest / ".env.example").read_text(encoding="utf-8")
+        env = env.replace("ADMIN_TOKEN=troque-este-token", f"ADMIN_TOKEN={secrets.token_urlsafe(24)}")
+        (dest / ".env").write_text(env, encoding="utf-8")
     (dest / ".gitignore").write_text(".env\ndata/\nkb/*.sqlite*\n__pycache__/\n", encoding="utf-8")
     print(f"projeto criado em {dest}")
     print("próximos passos:")
@@ -60,6 +64,7 @@ def cmd_init(args):
     print("  transformsite ingest           # lê o site/documentos")
     print("  transformsite chat             # conversa no terminal")
     print("  transformsite serve            # web + painel + canais configurados")
+    print(f"  token do painel /admin: veja ADMIN_TOKEN em {dest / '.env'}")
 
 
 # ---------- ingest / inventory ----------
@@ -185,13 +190,23 @@ def cmd_eval(args):
     if args.scenarios or not args.golden:
         sdir = Path(args.scenarios or cfg.root / "tests" / "cenarios")
         if sdir.exists():
-            res = run_scenarios(cfg, sdir, channels=args.channels.split(",") if args.channels else None)
+            res = run_scenarios(cfg, sdir, channels=args.channels.split(",") if args.channels else None, real_llm=args.real_llm)
             for r in res["results"]:
                 mark = "ok  " if r["ok"] else "FAIL"
                 print(f"{mark} {r['channel']:9} {r['name']}" + ("" if r["ok"] else f" — {r['error']}"))
             print(f"{res['passed']}/{res['total']} cenários passaram")
             rc |= 0 if res["passed"] == res["total"] else 1
     sys.exit(rc)
+
+
+def cmd_golden(args):
+    from .golden import draft_golden, write_golden
+
+    cfg = _cfg(args)
+    out = Path(args.out) if args.out else cfg.root / "tests" / "golden.rascunho.jsonl"
+    items = draft_golden(cfg, n=args.n)
+    write_golden(items, out)
+    print(f"{len(items)} perguntas em {out} — REVISE antes de usar como gabarito (renomeie para golden.jsonl)")
 
 
 def cmd_report(args):
@@ -288,8 +303,14 @@ def main(argv=None):
     s.add_argument("--scenarios")
     s.add_argument("--channels", help="cli,telegram,whatsapp,email,web")
     s.add_argument("--limit", type=int)
+    s.add_argument("--real-llm", action="store_true", help="cenários com o LLM configurado (padrão: fake determinístico)")
     s.add_argument("--out")
     s.set_defaults(fn=cmd_eval)
+
+    s = sub.add_parser("golden", help="gera rascunho de perguntas de teste a partir da base")
+    s.add_argument("--n", type=int, default=50)
+    s.add_argument("--out")
+    s.set_defaults(fn=cmd_golden)
 
     s = sub.add_parser("serve", help="sobe web widget, painel e canais")
     s.add_argument("--host", default="0.0.0.0")

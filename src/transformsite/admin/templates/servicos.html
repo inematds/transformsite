@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Serviços{% endblock %}
+{% block body %}
+<h1>Serviços</h1>
+<p class="row">
+  <form class="inline" method="post" action="/admin/servicos/recarregar"><input type="hidden" name="csrf" value="{{ csrf }}"><button>Recarregar serviços no bot</button></form>
+  <span class="mute">Só serviços <b>approved</b> e sem erro de validação entram no bot.</span>
+</p>
+{% if load_errors %}<div class="warn">Ignorados no carregamento:<br>{% for e in load_errors %}{{ e }}<br>{% endfor %}</div>{% endif %}
+{% for it in items %}
+<div class="card">
+  <div class="row">
+    <b>{{ it.service or it.file }}</b>
+    {% if it.review %}<span class="tag {{ it.review }}">{{ it.review }}</span>{% endif %}
+    {% if it.loaded %}<span class="tag bot">carregado</span>{% endif %}
+    <span class="mute">{{ it.file }}{% if it.version %} · v{{ it.version }}{% endif %} · {{ it.desc }}</span>
+    {% if it.review == 'pending' %}
+    <form class="inline" method="post" action="/admin/servicos/{{ it.file }}/aprovar"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="pri" {{ 'disabled' if it.errors }}>Aprovar</button></form>
+    {% endif %}
+  </div>
+  {% if it.errors %}<p class="bad">{% for e in it.errors %}• {{ e }}<br>{% endfor %}</p>{% else %}<p class="ok">validação ok</p>{% endif %}
+  <details><summary class="mute">ver YAML</summary><pre>{{ it.yaml }}</pre></details>
+</div>
+{% else %}
+<p class="mute">Nenhum services/*.yaml. Use <code>transformsite convert</code> para gerar a partir de formulários.</p>
+{% endfor %}
+{% endblock %}

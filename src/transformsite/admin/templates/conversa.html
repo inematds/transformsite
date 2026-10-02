@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Conversa {{ s.id }}{% endblock %}
+{% block body %}
+<p><a href="/admin/conversas">← Conversas</a></p>
+<h1>Conversa {{ s.id }} <span class="tag {{ s.status }}">{{ 'humano' if s.status == 'human' else 'bot' }}</span></h1>
+<div class="grid">
+  <div class="card"><div class="k">Canal / usuário</div><div>{{ s.channel }} · {{ s.meta.get('name') or (s.user_id|mask) }}</div></div>
+  <div class="card"><div class="k">Serviço</div><div>{{ service or '—' }}</div></div>
+  <div class="card"><div class="k">Slot atual / fase</div><div>{{ current or '—' }} / {{ phase or '—' }}</div></div>
+  <div class="card"><div class="k">Slots coletados</div><div>{% for k, v in slots.items() %}{{ k }}: <span class="mute">{{ v|mask }}</span><br>{% else %}—{% endfor %}</div></div>
+</div>
+<div class="row" style="margin-bottom:12px">
+  {% if s.status == 'human' %}
+  <form class="inline" method="post" action="/admin/conversas/{{ s.id }}/devolver"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="pri">Devolver ao bot</button></form>
+  <span class="mute">O bot está em silêncio; mensagens do cliente chegam como notificação.</span>
+  {% else %}
+  <form class="inline" method="post" action="/admin/conversas/{{ s.id }}/assumir"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="pri">Assumir</button></form>
+  {% endif %}
+</div>
+
+<div class="card">
+{% for m in msgs %}
+  {% set human = m.author.startswith('human') %}
+  <div class="msg {{ 'human' if human else m.direction }}">
+    <div class="meta">{{ m.ts|dt }} · {{ m.author or m.direction }}{% if m.data.get('kind') %} · {{ m.data.kind }}{% endif %}</div>{{ m.text }}
+    {% if m.data.get('citations') %}<div class="meta">{% for c in m.data.citations %}[{{ c.n }}] <a href="{{ c.url|url }}" rel="noopener noreferrer" target="_blank">{{ c.url }}</a> {% endfor %}</div>{% endif %}
+    {% if m.direction == 'out' and m.author == 'bot' %}
+    <form class="inline" method="post" action="/admin/conversas/{{ s.id }}/errada"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="msg_id" value="{{ m.id }}"><button class="small" title="cria ticket de erro com a citação">resposta errada</button></form>
+    {% endif %}
+  </div>
+{% else %}
+  <p class="mute">Sem mensagens (podem ter sido expurgadas pela retenção).</p>
+{% endfor %}
+</div>
+
+<div class="card">
+  <h2>Responder como humano</h2>
+  {% if not has_hooks %}<p class="warn">Nenhum canal ativo registrou envio: a resposta fica só no histórico.</p>{% endif %}
+  <form method="post" action="/admin/conversas/{{ s.id }}/responder">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+    <textarea name="text" placeholder="Mensagem para o cliente"></textarea>
+    <p class="row"><input name="author" placeholder="seu nome (opcional)"><button class="pri">Enviar</button></p>
+  </form>
+</div>
+
+{% if tickets %}
+<h2>Tickets desta conversa</h2>
+<div class="wrap"><table>
+  <tr><th>Ticket</th><th>Tipo</th><th>Assunto</th><th>Status</th></tr>
+  {% for t in tickets %}<tr><td>{{ t.id }}</td><td><span class="tag {{ t.kind }}">{{ t.kind }}</span></td><td>{{ t.subject }}</td><td><span class="tag {{ t.status }}">{{ t.status }}</span></td></tr>{% endfor %}
+</table></div>
+{% endif %}
+{% endblock %}

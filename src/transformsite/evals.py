@@ -94,7 +94,7 @@ def _parse_delta(s: str) -> timedelta:
     return {"d": timedelta(days=n), "h": timedelta(hours=n), "m": timedelta(minutes=n)}[u]
 
 
-def run_scenario(cfg: ProjectConfig, scenario: dict, channel: str = "cli", agent_factory=None) -> dict:
+def run_scenario(cfg: ProjectConfig, scenario: dict, channel: str = "cli", agent_factory=None, real_llm: bool = False) -> dict:
     """Roda um roteiro num projeto temporário (estado isolado). Retorna {ok, error, transcript}."""
     from .channels import get_simulator
     from .engine import Agent
@@ -104,7 +104,8 @@ def run_scenario(cfg: ProjectConfig, scenario: dict, channel: str = "cli", agent
     tmp = Path(tempfile.mkdtemp(prefix="ts-scn-"))
     c = copy.deepcopy(cfg)
     c.root = tmp
-    c.llm.provider = scenario.get("llm", cfg.llm.provider if cfg.llm.provider != "ollama" else "fake")
+    # padrão determinístico (fake); --real-llm usa o provider configurado
+    c.llm.provider = scenario.get("llm") or (cfg.llm.provider if real_llm else "fake")
     if (cfg.root / "services").exists():
         shutil.copytree(cfg.root / "services", tmp / "services")
     if (cfg.root / "tools").exists():
@@ -182,9 +183,9 @@ def load_scenarios(sdir: Path) -> list[dict]:
     return out
 
 
-def run_scenarios(cfg: ProjectConfig, sdir: Path, channels: list[str] | None = None) -> dict:
+def run_scenarios(cfg: ProjectConfig, sdir: Path, channels: list[str] | None = None, real_llm: bool = False) -> dict:
     results = []
     for s in load_scenarios(sdir):
         for ch in channels or s.get("channels") or ["cli"]:
-            results.append(run_scenario(cfg, s, ch))
+            results.append(run_scenario(cfg, s, ch, real_llm=real_llm))
     return {"total": len(results), "passed": sum(r["ok"] for r in results), "results": results}

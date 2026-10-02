@@ -170,6 +170,13 @@ def load(root: Path | str | None = None) -> ProjectConfig:
     raw = yaml.safe_load((r / CONFIG_NAME).read_text(encoding="utf-8")) or {}
     cfg = ProjectConfig(**_expand_env(raw))
     cfg.root = r
+    # overrides por ambiente (úteis em Docker/VPS)
     if os.environ.get("TRANSFORMSITE_LLM"):
         cfg.llm.provider = os.environ["TRANSFORMSITE_LLM"]
+    if os.environ.get("TRANSFORMSITE_LLM_BASE_URL"):
+        cfg.llm.base_url = os.environ["TRANSFORMSITE_LLM_BASE_URL"]
+    if os.environ.get("LLM_MODEL"):
+        cfg.llm.model = os.environ["LLM_MODEL"]
+    if os.environ.get("EMBED_MODEL"):
+        cfg.llm.embed_model = os.environ["EMBED_MODEL"]
     return cfg

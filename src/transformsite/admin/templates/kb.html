@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Base de conhecimento{% endblock %}
+{% block body %}
+<h1>Base de conhecimento</h1>
+<div class="grid">
+  <div class="card"><div class="k">Páginas</div><div class="v">{{ stats.pages }}</div></div>
+  <div class="card"><div class="k">Trechos</div><div class="v">{{ stats.chunks }}</div></div>
+  <div class="card"><div class="k">Com embedding</div><div class="v">{{ stats.with_embeddings }}</div></div>
+  <div class="card"><div class="k">Última leitura</div><div class="v" style="font-size:16px">{{ stats.last_fetch|dt }}</div></div>
+</div>
+<div class="card">
+  <div class="row">
+    <form class="inline" method="post" action="/admin/kb/reingerir"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="pri" {{ 'disabled' if ing.running }}>Re-ingerir</button></form>
+    {% if ing.running %}<span class="tag pending">em andamento desde {{ ing.started|dt }}</span> <a href="/admin/kb">atualizar</a>
+    {% elif ing.error %}<span class="bad">falhou: {{ ing.error }}</span>
+    {% elif ing.result %}<span class="ok">concluída {{ ing.ended|dt }}: {{ ing.result.get('pages_seen') }} páginas lidas, {{ ing.result.get('pages_changed') }} alteradas</span>
+    {% else %}<span class="mute">Fontes: {{ sources|join(', ') or 'nenhuma configurada em kb.urls/sitemaps/files' }}</span>{% endif %}
+  </div>
+  {% if ing.log %}<pre>{{ ing.log[-15:]|join('\n') }}</pre>{% endif %}
+</div>
+<h2>Últimas páginas</h2>
+<div class="wrap"><table>
+  <tr><th>Lida em</th><th>Título</th><th>URL</th><th>Palavras</th></tr>
+  {% for p in pages %}
+  <tr><td>{{ p.fetched_at|dt }}</td><td>{{ p.title }}</td><td><a href="{{ p.url|url }}" rel="noopener noreferrer" target="_blank">{{ p.url }}</a></td><td>{{ p.words }}</td></tr>
+  {% else %}
+  <tr><td colspan="4" class="mute">Índice vazio. Rode a ingestão.</td></tr>
+  {% endfor %}
+</table></div>
+{% endblock %}

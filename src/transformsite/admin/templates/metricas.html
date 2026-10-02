@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Métricas{% endblock %}
+{% block body %}
+{% set r = res.resumo %}
+<h1>Métricas <span class="mute">desde {{ res.desde }}</span></h1>
+<p class="row">
+  Janela:
+  {% for n in [1, 7, 14, 30] %}<a href="/admin/metricas?dias={{ n }}" class="{{ 'ok' if n == dias }}">{{ n }}d</a>{% endfor %}
+  · <a href="/admin/metricas.csv?dias={{ dias }}">exportar CSV</a>
+</p>
+<div class="grid">
+  <div class="card"><div class="k">Conversas</div><div class="v">{{ r.conversas }}</div></div>
+  <div class="card"><div class="k">Resolução sem humano</div><div class="v">{{ r.taxa_resolucao|pct }}</div><div class="k">meta ≥ 70%</div></div>
+  <div class="card"><div class="k">Taxa de handoff</div><div class="v">{{ r.taxa_handoff|pct }}</div><div class="k">meta ≤ 25%</div></div>
+  <div class="card"><div class="k">Respostas com citação</div><div class="v">{{ r.taxa_citacao|pct }}</div><div class="k">{{ r.respostas_com_citacao }}/{{ r.respostas }} · meta ≥ 85%</div></div>
+  <div class="card"><div class="k">"Não sei"</div><div class="v">{{ r.nao_sei }}</div></div>
+  <div class="card"><div class="k">Tempo até concluir (mediana)</div><div class="v">{{ r.mediana_conclusao_s if r.mediana_conclusao_s is not none else '—' }}{% if r.mediana_conclusao_s is not none %} s{% endif %}</div></div>
+  <div class="card"><div class="k">Latência p50 / p95</div><div class="v">{{ r.latencia_p50_ms if r.latencia_p50_ms is not none else '—' }} / {{ r.latencia_p95_ms if r.latencia_p95_ms is not none else '—' }} ms</div></div>
+  <div class="card"><div class="k">Reportadas erradas</div><div class="v">{{ r.reportadas_erradas }}</div></div>
+</div>
+
+<h2>Por dia</h2>
+<div class="wrap"><table>
+  <tr><th>Dia</th><th>Conversas</th><th style="width:18%"></th><th>Resolução</th><th>Handoff</th><th>Citação</th><th>Não sei</th><th>Serv. ini/concl/canc</th><th>Mediana concl.</th><th>p50/p95 ms</th><th>Erradas</th></tr>
+  {% for d in res.por_dia %}
+  <tr>
+    <td>{{ d.dia }}</td><td>{{ d.conversas }}</td>
+    <td><div class="bar" style="width:{{ (100 * d.conversas / mx)|round(1) }}%"></div></td>
+    <td>{{ d.taxa_resolucao|pct }}</td><td>{{ d.taxa_handoff|pct }}</td><td>{{ d.taxa_citacao|pct }}</td><td>{{ d.nao_sei }}</td>
+    <td>{{ d.servicos_iniciados }}/{{ d.servicos_concluidos }}/{{ d.servicos_cancelados }}</td>
+    <td>{{ d.mediana_conclusao_s if d.mediana_conclusao_s is not none else '—' }}</td>
+    <td>{{ d.latencia_p50_ms if d.latencia_p50_ms is not none else '—' }}/{{ d.latencia_p95_ms if d.latencia_p95_ms is not none else '—' }}</td>
+    <td>{{ d.reportadas_erradas }}</td>
+  </tr>
+  {% endfor %}
+</table></div>
+
+<div class="grid" style="margin-top:12px">
+  <div class="card">
+    <h2>Por serviço</h2>
+    {% for svc, c in res.por_servico.items() %}<div>{{ svc }}: <span class="mute">iniciados {{ c.get('started', 0) }} · concluídos {{ c.get('completed', 0) }} · cancelados {{ c.get('cancelled', 0) }} · falhas {{ c.get('failed', 0) }}</span></div>{% else %}<span class="mute">—</span>{% endfor %}
+  </div>
+  <div class="card">
+    <h2>Abandono por slot</h2>
+    {% for k, n in res.abandono_por_slot.items() %}<div>{{ k }}: <b>{{ n }}</b></div>{% else %}<span class="mute">—</span>{% endfor %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+# transformsite — configuração do projeto
+name: inemaclub
+org: "INEMA.CLUB"
+language: pt-BR
+welcome: >-
+  Olá! Sou o assistente do INEMA.CLUB 🤖 Respondo dúvidas sobre cursos, guias, eventos e a comunidade
+  com base no site inema.club (sempre com o link da fonte), e posso agendar uma conversa com a equipe.
+  Guardamos as conversas por 90 dias para melhorar o atendimento.
+fallback_contact: "inematds@gmail.com"
+
+llm:
+  # ollama (local, padrão) | openai_compat (vLLM/LM Studio) | claude_cli | codex_cli | fake
+  provider: ollama
+  model: qwen3.6:35b-a3b
+  base_url: http://localhost:11434
+  embed_model: bge-m3
+
+kb:
+  urls: [https://www.inema.club/]
+  sitemaps: [https://www.inema.club/sitemap.xml, https://www.inema.club/courses-sitemap.xml]
+  include: []           # regex de URLs a incluir
+  exclude: ['/en/', '/es/', '\?']
+  files: ['docs/**/*.md', 'docs/**/*.pdf']   # base de conhecimento local (opcional)
+  max_pages: 400
+
+agenda:
+  provider: local       # local (sem configuração) | calcom
+  business_hours: "mon-fri 09:00-17:00"
+  slot_minutes: 30
+  min_lead_hours: 2
+
+handoff:
+  # para onde vão os pedidos de atendimento humano: panel | email:<endereço> | telegram:<chat_id>
+  targets: [panel, "email:inematds@gmail.com"]
+  hours: "seg–sex, 9h–18h"
+
+retention:
+  transcripts_days: 90
+  audit_months: 12
+
+privacy:
+  controller: "INEMA.CLUB"
+  dpo_contact: "inematds@gmail.com"
+
+email:
+  smtp_host: ""         # vazio = e-mails vão para data/outbox/*.eml (modo seguro)
+  smtp_from: ""
+
+channels:
+  web: {enabled: true}
+  telegram: {token_env: TELEGRAM_BOT_TOKEN}
+  whatsapp: {provider: evolution, base_url: "http://localhost:8080", instance: "inemaclub", apikey_env: EVOLUTION_API_KEY}
+  email: {enabled: false}

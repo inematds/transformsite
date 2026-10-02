@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+dist/
+*.egg-info/
+.env
+pilot/data/
+pilot/kb/*.sqlite*
+deploy/vps/.env
+deploy/vps/projeto/
+guia/assets/*.codex.log

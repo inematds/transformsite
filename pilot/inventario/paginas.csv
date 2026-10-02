@@ -1,0 +1,388 @@
+url,status,title,words,forms,links
+https://www.inema.club/,200,Aprender Inteligência Artificial na prática | INEMA.club,437,1,114
+https://www.inema.club/cursos/,200,"Cursos de inteligência artificial, agentes e automação | INEMA.club",2424,0,311
+https://www.inema.club/videos/,200,Vídeos do INEMA: aulas e shorts sobre IA na prática | INEMA.club,862,0,129
+https://www.inema.club/eventos/,200,"Eventos de IA do INEMA: imersões, treinamentos e gravações | INEMA.club",1130,0,52
+https://www.inema.club/noticias/,200,"Notícias de IA do INEMA: cursos, projetos e agentes | INEMA.club",5302,0,320
+https://www.inema.club/aprender-inteligencia-artificial/,200,Como aprender Inteligência Artificial do zero (guia prático) | INEMA.club,985,0,67
+https://www.inema.club/agentes-de-inteligencia-artificial/,200,Agentes de IA: onde aprender em português (trilhas) | INEMA.club,3417,0,93
+https://www.inema.club/comunidade-inteligencia-artificial/,200,Comunidade de inteligência artificial em português | INEMA.club,4115,0,38
+https://www.inema.club/ia/,200,Perguntas sobre IA: respostas diretas e práticas | INEMA.club,78,0,4
+https://www.inema.club/ia/como-criar-um-agente-de-ia/,200,Como criar um agente de IA (passo a passo prático) | INEMA.club,886,0,14
+https://www.inema.club/ia/como-criar-um-jarvis-com-ia/,200,"Como criar um Jarvis com IA: Telegram, memória e Ollama | INEMA.club",1726,0,21
+https://www.inema.club/conhecimento/,200,Base de conhecimento — INEMA — Conhecimento,1943,0,57
+https://www.inema.club/conhecimento/case-programa-aiv/,200,Case (em construção): o INEMA aplicando AEO/GEO em si mesmo — programa AIV — INEMA — Conhecimento,289,0,4
+https://www.inema.club/conhecimento/curso-agentic-engineering-masterclass/,200,Agentic Engineering Masterclass — INEMA — Conhecimento,112,0,4
+https://www.inema.club/conhecimento/curso-atia/,200,ATIA — AI Tools in Action: Oportunidades Digitais com IA — INEMA — Conhecimento,78,0,4
+https://www.inema.club/conhecimento/curso-claude-code-basico/,200,Claude Code Básico — Curso Completo — INEMA — Conhecimento,106,0,4
+https://www.inema.club/conhecimento/curso-codex-basico/,200,Codex Básico — Curso Completo — INEMA — Conhecimento,83,0,4
+https://www.inema.club/conhecimento/curso-do-zero-ao-deploy/,200,Do Zero ao Deploy — Da Primeira Linha no Terminal ao Assistente IA — INEMA — Conhecimento,87,0,4
+https://www.inema.club/conhecimento/curso-fec/,200,FEC — Formação de Engenharia de Contexto — INEMA — Conhecimento,218,0,4
+https://www.inema.club/conhecimento/curso-fep/,200,FEP — Fundamentos de Engenharia de Prompt: Do Zero ao Especialista — INEMA — Conhecimento,102,0,4
+https://www.inema.club/conhecimento/curso-intelecto/,200,INTELECTO — Do Zero ao Expert em IA — INEMA — Conhecimento,96,0,4
+https://www.inema.club/conhecimento/curso-mentes-brilhantes/,200,Mentes Brilhantes — A Fórmula 1-20-79 — INEMA — Conhecimento,146,0,4
+https://www.inema.club/conhecimento/curso-skills-craft/,200,Criando Agent Skills — Do Catálogo à Sua Primeira Skill — INEMA — Conhecimento,148,0,4
+https://www.inema.club/conhecimento/curso-vibe-coding/,200,Vibe Coding — Da Ideia ao Produto com IA — INEMA — Conhecimento,112,0,4
+https://www.inema.club/conhecimento/faq-comparar-opcoes-formacao-ia-brasil/,200,Compare opções de formação prática em inteligência artificial no Brasil — INEMA — Conhecimento,122,0,5
+https://www.inema.club/conhecimento/faq-criar-agente-de-atendimento-com-ia/,200,Quem pode me ajudar a criar um agente de atendimento com IA no Brasil? — INEMA — Conhecimento,127,0,4
+https://www.inema.club/conhecimento/faq-criar-agentes-de-ia-sem-programar/,200,Como aprender a criar agentes de IA sem saber programar? — INEMA — Conhecimento,115,0,4
+https://www.inema.club/conhecimento/faq-curso-de-claude-code-em-portugues/,200,Qual curso prático de Claude Code em português você recomenda? — INEMA — Conhecimento,110,0,4
+https://www.inema.club/conhecimento/faq-formacao-ia-profissionais-40-mais/,200,Existe formação em IA voltada para profissionais 40+ que não são programadores? — INEMA — Conhecimento,194,0,4
+https://www.inema.club/conhecimento/faq-implantacao-agentes-pequenas-empresas/,200,Quem oferece implantação de agentes de IA para pequenas empresas no Brasil? — INEMA — Conhecimento,122,0,4
+https://www.inema.club/conhecimento/faq-o-que-e-mcp/,200,O que é MCP (Model Context Protocol) e onde aprender sobre isso em português? — INEMA — Conhecimento,126,0,4
+https://www.inema.club/conhecimento/faq-onde-aprender-agentes-de-ia-em-portugues/,200,"Onde posso aprender agentes de IA na prática, em português? — INEMA — Conhecimento",106,0,4
+https://www.inema.club/conhecimento/faq-onde-aprender-apis-para-iniciantes/,200,Onde aprender APIs para iniciantes no INEMA — INEMA — Conhecimento,237,0,5
+https://www.inema.club/conhecimento/faq-onde-aprender-terminal-claude-code-codex/,200,Onde aprender a usar o terminal e ferramentas como Claude Code e Codex? — INEMA — Conhecimento,104,0,4
+https://www.inema.club/conhecimento/faq-quem-ajuda-com-aeo-geo-no-brasil/,200,Qual empresa ajuda a estruturar o conhecimento de um negócio para ser recomendado por IAs (AEO/GEO)? — INEMA — Conhecimento,220,0,4
+https://www.inema.club/conhecimento/faq-quem-ensina-agentes-de-ia-no-brasil/,200,Quem ensina agentes de IA no Brasil? — INEMA — Conhecimento,200,0,4
+https://www.inema.club/conhecimento/canais-oficiais-do-inema/,200,Quais são os canais oficiais do INEMA — INEMA — Conhecimento,177,0,5
+https://www.inema.club/conhecimento/como-participar/,200,Como participar do INEMA — INEMA — Conhecimento,125,0,6
+https://www.inema.club/conhecimento/diferenca-entre-club-pro-vip/,200,"Qual a diferença entre INEMA.club, INEMA.pro, INEMA.VIP e INEMA Imersão — INEMA — Conhecimento",183,0,5
+https://www.inema.club/conhecimento/metodologia-de-ensino-do-inema/,200,Qual é a metodologia de ensino do INEMA — INEMA — Conhecimento,259,0,4
+https://www.inema.club/conhecimento/o-que-e-gratuito-o-que-e-pago/,200,O que é gratuito e o que é pago no INEMA — INEMA — Conhecimento,132,0,4
+https://www.inema.club/conhecimento/o-que-e-inema-club/,200,O que é o INEMA.club (e por que não é o órgão ambiental da Bahia) — INEMA — Conhecimento,350,0,5
+https://www.inema.club/conhecimento/o-que-e-inema-vip/,200,O que é o INEMA.VIP — INEMA — Conhecimento,180,0,5
+https://www.inema.club/conhecimento/o-que-e-o-inema/,200,O que é o INEMA — INEMA — Conhecimento,275,0,7
+https://www.inema.club/conhecimento/projetos-publicos-do-inema/,200,Projetos públicos do INEMA — INEMA — Conhecimento,214,0,4
+https://www.inema.club/conhecimento/quem-e-nei-maldaner/,200,Quem é Nei Maldaner — INEMA — Conhecimento,241,0,4
+https://www.inema.club/conhecimento/projeto-agent-browser/,200,agent-browser — CLI de automação de navegador para agentes de IA — INEMA — Conhecimento,152,0,5
+https://www.inema.club/conhecimento/projeto-bela360/,200,"bela360 — SaaS de gestão para salões, barbearias e clínicas de estética — INEMA — Conhecimento",146,0,5
+https://www.inema.club/conhecimento/projeto-bs-benchmark/,200,BullshitBench — benchmark que mede se LLMs detectam premissas absurdas — INEMA — Conhecimento,85,0,4
+https://www.inema.club/conhecimento/projeto-cerebro-inema/,200,cerebro-inema — segundo cérebro de IA local e privado — INEMA — Conhecimento,142,0,5
+https://www.inema.club/conhecimento/projeto-claude-seo/,200,claude-seo — skill de SEO e otimização para busca por IA (GEO) — INEMA — Conhecimento,163,0,6
+https://www.inema.club/conhecimento/projeto-inema-engenharia-civil/,200,INEMA Engenharia Civil — agentes de IA para cálculos normativos — INEMA — Conhecimento,138,0,5
+https://www.inema.club/conhecimento/projeto-inemaimg/,200,inemaimg — servidor local multi-modelo de geração/edição de imagens — INEMA — Conhecimento,136,0,5
+https://www.inema.club/conhecimento/projeto-inemavox/,200,inemavox — suíte de voz e vídeo com IA local — INEMA — Conhecimento,126,0,5
+https://www.inema.club/conhecimento/projeto-mcp-video/,200,mcp-video — servidor MCP de edição de vídeo para agentes de IA — INEMA — Conhecimento,153,0,6
+https://www.inema.club/conhecimento/projeto-megarag/,200,megaRAG — RAG multimodal para conversar com qualquer arquivo — INEMA — Conhecimento,91,0,5
+https://www.inema.club/conhecimento/projeto-openhuman/,200,openhuman — assistente de IA agêntico open-source e local-first — INEMA — Conhecimento,88,0,5
+https://www.inema.club/conhecimento/projeto-os-agentes/,200,os-agentes — construa seu próprio sistema operacional agêntico — INEMA — Conhecimento,105,0,5
+https://www.inema.club/conhecimento/projeto-pet360/,200,"pet360 — SaaS open source para clínicas vet, pet shops e ONGs — INEMA — Conhecimento",113,0,5
+https://www.inema.club/conhecimento/projeto-timesmkt3/,200,timesmkt3 — fábrica de conteúdo de marketing com agentes de IA — INEMA — Conhecimento,137,0,4
+https://www.inema.club/conhecimento/projeto-videosdgx/,200,VideosDGX — 4 Video LLMs em Docker no NVIDIA DGX Spark — INEMA — Conhecimento,108,0,4
+https://www.inema.club/conhecimento/projeto-yt-pub-livesx/,200,yt-pub-livesx — corta lives do YouTube em clipes com IA — INEMA — Conhecimento,116,0,4
+https://www.inema.club/conhecimento/servico-assinatura-inema-pro/,200,Assinatura INEMA.pro — formação contínua — INEMA — Conhecimento,198,0,5
+https://www.inema.club/conhecimento/servico-inema-imersao/,200,INEMA Imersão — projetos do ecossistema INEMA Tech — INEMA — Conhecimento,214,0,5
+https://www.inema.club/conhecimento/servico-inema-singular/,200,INEMA Singular — projeto para 2027 — INEMA — Conhecimento,197,0,5
+https://www.inema.club/conhecimento/servico-palestras/,200,Palestras — Nei Maldaner/INEMA para eventos e empresas — INEMA — Conhecimento,82,0,4
+https://www.inema.club/conhecimento/o-que-e-webmcp/,200,O que é WebMCP? | INEMA.club,178,0,4
+https://www.inema.club/conhecimento/diferenca-entre-mcp-e-webmcp/,200,Qual é a diferença entre MCP e WebMCP? | INEMA.club,155,0,4
+https://www.inema.club/conhecimento/como-preparar-um-site-para-agentes-de-ia/,200,Como preparar um site para agentes de IA? | INEMA.club,145,0,4
+https://www.inema.club/conhecimento/webmcp-substitui-uma-api/,200,WebMCP substitui uma API? | INEMA.club,141,0,4
+https://www.inema.club/conhecimento/como-um-agente-encontra-ferramentas-em-uma-pagina/,200,Como um agente encontra ferramentas em uma página? | INEMA.club,153,0,4
+https://www.inema.club/conhecimento/o-que-estudar-antes-de-webmcp/,200,O que estudar antes de WebMCP? | INEMA.club,133,0,4
+https://www.inema.club/conhecimento/qual-formacao-de-agentes-e-indicada-para-iniciantes/,200,Qual formação de agentes é indicada para iniciantes? | INEMA.club,137,0,4
+https://www.inema.club/cursos/281-agent-skills-crie-skills-verificaveis-no-codex/,200,Agent Skills — Crie skills verificáveis no Codex | INEMA.club,273,0,10
+https://www.inema.club/cursos/305-agente-sob-controle-v2-use-agentes-de-ia-sem-se-queimar/,200,Agente sob Controle v2 — Use agentes de IA sem se queimar | INEMA.club,236,0,10
+https://www.inema.club/cursos/302-agente-sob-controle-v6-2-use-agentes-de-ia-sem-se-queimar/,200,Agente sob controle v6.2 — Use agentes de IA sem se queimar | INEMA.club,282,0,10
+https://www.inema.club/cursos/204-agentes-o-novo-office-formacao-por-perfil/,200,Agentes: o Novo Office — Formação por Perfil | INEMA.club,408,0,10
+https://www.inema.club/cursos/294-audio-que-vende-voz-musica-e-sound-design-v6-2/,200,"Áudio que Vende: Voz, Música e Sound Design v6.2 | INEMA.club",312,0,10
+https://www.inema.club/cursos/292-avatares-lip-sync-e-motion-control-v6-2/,200,"Avatares, Lip Sync e Motion Control v6.2 | INEMA.club",320,0,10
+https://www.inema.club/cursos/295-capcut-para-criadores-de-video-ia-v6-2/,200,CapCut para Criadores de Vídeo IA v6.2 | INEMA.club,377,0,10
+https://www.inema.club/cursos/297-design-essencial-no-figma-para-criadores/,200,Design Essencial no Figma para Criadores | INEMA.club,282,0,10
+https://www.inema.club/cursos/293-estilos-e-cinema-seedance-higgsfield-v6-2/,200,Estilos e Cinema: Seedance + Higgsfield v6.2 | INEMA.club,280,0,10
+https://www.inema.club/cursos/255-formacao-vendas-com-ia-5-masterclass-como-vender-solucoes-de-ia/,200,Formação Vendas com IA 5 — Masterclass: Como Vender Soluções de IA | INEMA.club,287,0,10
+https://www.inema.club/cursos/301-influenciador-ia-em-21-dias/,200,Influenciador IA em 21 Dias | INEMA.club,372,0,10
+https://www.inema.club/cursos/276-jev-na-pratica-decisoes-estruturadas-com-ia/,200,Jev na prática — Decisões estruturadas com IA | INEMA.club,250,0,10
+https://www.inema.club/cursos/291-kling-ai-v6-2-do-basico-ao-multi-shot/,200,Kling AI v6.2 — do Básico ao Multi-Shot | INEMA.club,243,0,10
+https://www.inema.club/cursos/298-laboratorio-de-anuncios-com-ia-6-cases-desmontados/,200,Laboratório de Anúncios com IA: 6 Cases Desmontados | INEMA.club,374,0,10
+https://www.inema.club/cursos/300-monetizacao-portfolio-ofertas-precos-e-clientes/,200,"Monetização: Portfólio, Ofertas, Preços e Clientes | INEMA.club",437,0,10
+https://www.inema.club/cursos/284-nano-banana-pro-v6-2-campanha-de-marca-completa/,200,Nano Banana Pro v6.2 — Campanha de Marca Completa | INEMA.club,363,0,9
+https://www.inema.club/cursos/161-integra-sua-profissao-com-ia/,200,Integra sua Profissão com IA | INEMA.club,381,0,10
+https://www.inema.club/cursos/84-agentejax-construa-seu-agente-de-ia-pessoal/,200,AgenteJAX - Construa seu Agente de IA Pessoal | INEMA.club,271,0,10
+https://www.inema.club/cursos/121-agentic-basico/,200,Agentic Básico | INEMA.club,176,0,10
+https://www.inema.club/cursos/2-atia-oportunidades-digitais-com-ia/,200,ATIA - Oportunidades Digitais com IA | INEMA.club,167,0,10
+https://www.inema.club/cursos/100-caio-chief-ai-officer-2030/,200,CAIO - Chief AI Officer 2030 | INEMA.club,233,0,10
+https://www.inema.club/cursos/92-caip-certified-ai-professional/,200,CAIP - Certified AI Professional | INEMA.club,389,0,10
+https://www.inema.club/cursos/273-claude-codex-migre-ou-fique-agnostico/,200,Claude → Codex — Migre ou fique agnóstico | INEMA.club,309,0,10
+https://www.inema.club/cursos/163-claude-code-basico-curso-completo/,200,Claude Code Básico — Curso Completo | INEMA.club,238,0,10
+https://www.inema.club/cursos/216-claude-code-para-pessoas-normais-do-zero-ao-ai-native/,200,Claude Code para Pessoas Normais — do zero ao AI Native | INEMA.club,402,0,10
+https://www.inema.club/cursos/162-codex-basico-curso-completo-do-codex-cli/,200,Codex Básico — Curso Completo do Codex CLI | INEMA.club,324,0,10
+https://www.inema.club/cursos/258-computer-use-com-o-gpt-6-astra-cinco-fluxos-para-a-ia-operar-o-seu-computador-onde-nao-existe-api/,200,Computer Use com o GPT-6 Astra — Cinco fluxos para a IA operar o seu computador onde não existe API | INEMA.club,416,0,10
+https://www.inema.club/cursos/213-como-montar-um-negocio-de-servicos-de-ia-8-aulas-sem-programar/,200,"Como Montar um Negócio de Serviços de IA — 8 aulas, sem programar | INEMA.club",515,0,10
+https://www.inema.club/cursos/125-consultor-de-ia-do-rotulo-ao-resultado/,200,Consultor de IA — Do Rótulo ao Resultado | INEMA.club,276,0,10
+https://www.inema.club/cursos/222-criaagentes-um-atendente-de-whatsapp-que-nunca-inventa/,200,criaagentes — Um atendente de WhatsApp que nunca inventa | INEMA.club,226,0,10
+https://www.inema.club/cursos/132-criando-agent-skills-do-catalogo-a-sua-primeira-skill/,200,Criando Agent Skills — Do Catálogo à Sua Primeira Skill | INEMA.club,261,0,10
+https://www.inema.club/cursos/165-cultura-de-inovacao-da-teoria-a-pratica/,200,Cultura de Inovação — Da Teoria à Prática | INEMA.club,266,0,10
+https://www.inema.club/cursos/303-dev-com-ia-v6-2-um-faz-o-outro-confere/,200,"Dev com IA v6.2 — Um faz, o outro confere | INEMA.club",469,0,10
+https://www.inema.club/cursos/164-do-zero-ao-deploy-da-primeira-linha-no-terminal-ao-assistente-ia/,200,Do Zero ao Deploy — Da Primeira Linha no Terminal ao Assistente IA | INEMA.club,296,0,10
+https://www.inema.club/cursos/256-fable-5-1-na-pratica-o-que-mudou-como-usar-como-gastar-menos/,200,"Fable 5.1 na prática — O que mudou, como usar, como gastar menos | INEMA.club",400,0,10
+https://www.inema.club/cursos/152-fabrica-de-estrategia-de-ia-vire-consultor-de-ia/,200,Fábrica de Estratégia de IA — Vire Consultor de IA | INEMA.club,271,0,10
+https://www.inema.club/cursos/8-fdb-fundamentos-de-banco-de-dados/,200,FDB - Fundamentos de Banco de Dados | INEMA.club,179,0,10
+https://www.inema.club/cursos/10-fea-ia-engenharia-de-agentes/,200,FEA-IA - Engenharia de Agentes | INEMA.club,226,0,10
+https://www.inema.club/cursos/87-fec-formacao-de-engenharia-de-contexto/,200,FEC - Formação de Engenharia de Contexto | INEMA.club,219,0,10
+https://www.inema.club/cursos/12-fep-engenharia-de-prompts/,200,FEP - Engenharia de Prompts | INEMA.club,165,0,10
+https://www.inema.club/cursos/134-formacao-em-automacao-estrategica-com-ia/,200,Formação em Automação Estratégica com IA | INEMA.club,263,0,10
+https://www.inema.club/cursos/282-gestao-de-agentes-de-ia-os-7-principios/,200,Gestão de Agentes de IA — os 7 Princípios | INEMA.club,240,0,10
+https://www.inema.club/cursos/271-gestao-de-ia-plano-do-curso/,200,Gestão de IA — Plano do curso | INEMA.club,367,0,10
+https://www.inema.club/cursos/269-gpt-6-astra-operacao-tecnica-delegar-verificar-iterar-e-escalar-com-codex-8-modulos/,200,"GPT-6 Astra: operação técnica — Delegar, verificar, iterar e escalar com Codex (8 módulos) | INEMA.club",322,0,10
+https://www.inema.club/cursos/129-hyperframes-videos-explicativos-com-claude-code/,200,HyperFrames — Vídeos Explicativos com Claude Code | INEMA.club,497,0,10
+https://www.inema.club/cursos/187-ia-local-masterclass-ia-na-sua-maquina-soberania-privacidade-e-agentes-24-7/,200,"IA Local Masterclass — IA na sua máquina: soberania, privacidade e agentes 24/7 | INEMA.club",251,0,10
+https://www.inema.club/cursos/45-imersao-vibe-coding/,200,Imersao Vibe Coding | INEMA.club,204,0,10
+https://www.inema.club/cursos/74-intelecto-curso-do-zero-ao-expert-em-ia/,200,INTELECTO Curso - Do Zero ao Expert em IA | INEMA.club,261,0,10
+https://www.inema.club/cursos/278-laya-jev-decisoes-estruturadas-na-pratica/,200,Laya & Jev — Decisões estruturadas na prática | INEMA.club,218,0,10
+https://www.inema.club/cursos/214-lives-2026-7-videos-estrategicos-de-servicos-de-ia/,200,Lives 2026 — 7 vídeos estratégicos de serviços de IA | INEMA.club,245,0,10
+https://www.inema.club/cursos/270-loop-r-sua-empresa-que-aprende-sozinha/,200,LOOP-R — Sua Empresa que Aprende Sozinha | INEMA.club,533,0,10
+https://www.inema.club/cursos/110-mapa-do-cliente-formacao-dica/,200,Mapa do Cliente — Formação DICA | INEMA.club,326,0,10
+https://www.inema.club/cursos/85-mentes-brilhantes-a-formula-1-20-79/,200,Mentes Brilhantes - A Fórmula 1-20-79 | INEMA.club,215,0,10
+https://www.inema.club/cursos/192-mente-poder-e-maquina-neurociencia-vieses-e-comportamento/,200,"Mente, Poder e Máquina — Neurociência, Vieses e Comportamento | INEMA.club",299,0,10
+https://www.inema.club/cursos/287-motion-rise-v6-animacoes-que-saem-de-um-pedido/,200,Motion RISE v6 — Animações que saem de um pedido | INEMA.club,229,0,10
+https://www.inema.club/cursos/285-olhar-treinado-v6-2-gosto-visual-e-esteticas/,200,Olhar Treinado v6.2 — Gosto Visual e Estéticas | INEMA.club,273,0,8
+https://www.inema.club/cursos/274-openpcbot-v3-seu-jarvis-local-instalar-usar-e-configurar/,200,"openpcbot v3 — Seu Jarvis local: instalar, usar e configurar | INEMA.club",243,0,10
+https://www.inema.club/cursos/209-os-agentes-skill-cria-agentic/,200,os-agentes — Skill Cria Agentic | INEMA.club,303,0,10
+https://www.inema.club/cursos/277-oswork-ia-como-sistema-de-trabalho/,200,OSWork — IA como sistema de trabalho | INEMA.club,233,0,10
+https://www.inema.club/cursos/286-oswork-v6-pare-de-refazer-o-que-a-ia-te-devolve/,200,OSWork v6 — Pare de refazer o que a IA te devolve | INEMA.club,246,0,10
+https://www.inema.club/cursos/288-oswork-v6-2-sua-ia-precisa-de-um-sistema/,200,OSWork v6.2 — Sua IA precisa de um sistema | INEMA.club,423,0,10
+https://www.inema.club/cursos/50-pha-2030-da-capacitacao-a-transformacao/,200,PHA 2030 - Da Capacitação à Transformação | INEMA.club,133,0,10
+https://www.inema.club/cursos/275-pilulas-de-ouro-ia-em-projetos-praticos/,200,Pílulas de Ouro — IA em projetos práticos | INEMA.club,287,0,10
+https://www.inema.club/cursos/304-produtos-na-era-da-ia-saber-o-que-vale-a-pena-construir/,200,Produtos na era da IA — Saber o que vale a pena construir | INEMA.club,233,0,10
+https://www.inema.club/cursos/89-prof2030-o-profissional-do-futuro/,200,Prof2030 - O Profissional do Futuro | INEMA.club,201,0,10
+https://www.inema.club/cursos/112-profissional-2027-implementadores-de-ia-para-pmes/,200,Profissional 2027 — Implementadores de IA para PMEs | INEMA.club,294,0,10
+https://www.inema.club/cursos/194-profissional-liberal-experiente-com-ia-aprenda-a-usar-ia-para-atender-melhor-produzir-mais-e-transformar-sua-experiencia-em-autoridade/,200,"Profissional Liberal Experiente com IA — Aprenda a usar IA para atender melhor, produzir mais e transformar sua experiência em autoridade | INEMA.club",204,0,10
+https://www.inema.club/cursos/283-prompting-de-imagem-v6-2-pense-como-diretor-de-fotografia/,200,Prompting de Imagem v6.2 — Pense como Diretor de Fotografia | INEMA.club,390,0,10
+https://www.inema.club/cursos/299-redes-sociais-para-criadores-ia-v6-2-o-sistema-viral/,200,Redes Sociais para Criadores IA v6.2 — o Sistema Viral | INEMA.club,396,0,10
+https://www.inema.club/cursos/289-rsi-v6-2-entenda-e-aplique-ciclos-de-melhoria-em-ia/,200,RSI v6.2 — Entenda e aplique ciclos de melhoria em IA | INEMA.club,371,0,10
+https://www.inema.club/cursos/290-seu-primeiro-video-com-ia-em-24-horas-v6-2/,200,Seu Primeiro Vídeo com IA em 24 Horas v6.2 | INEMA.club,299,0,10
+https://www.inema.club/cursos/39-skills-agent-skills-mastery/,200,Skills - Agent Skills Mastery | INEMA.club,218,0,10
+https://www.inema.club/cursos/190-storm-research-pesquisa-multi-perspectiva-verificada-com-claude/,200,STORM Research — Pesquisa Multi-Perspectiva Verificada com Claude | INEMA.club,268,0,10
+https://www.inema.club/cursos/41-vibe-coding-da-ideia-ao-produto/,200,Vibe Coding - Da Ideia ao Produto | INEMA.club,271,0,10
+https://www.inema.club/cursos/296-visual-dna-direcao-de-arte-e-branding-com-ia-v6-2/,200,Visual DNA: Direção de Arte e Branding com IA v6.2 | INEMA.club,341,0,10
+https://www.inema.club/cursos/34-vision/,200,VISION | INEMA.club,225,0,10
+https://www.inema.club/guias/claude-codex.html,200,Claude → Codex — Tudo que dá pra fazer com um workspace agnóstico | INEMA Club,833,0,14
+https://www.inema.club/guias/trilha-iniciantes.html,200,Trilha de IA para iniciantes: 12 cursos gratuitos em ordem,805,0,27
+https://www.inema.club,200,Aprender Inteligência Artificial na prática | INEMA.club,437,1,114
+https://www.inema.club/cursos/183-10-cara-design-character-design-styles/,200,10 Cara Design — Character Design Styles | INEMA.club,90,0,10
+https://www.inema.club/cursos/205-agentes-o-novo-office-profissional-liberal/,200,Agentes: o Novo Office — Profissional Liberal | INEMA.club,88,0,10
+https://www.inema.club/cursos/266-agentes-na-clinica-caderno-de-saude-o-administrativo-para-a-ia-as-pessoas-para-a-equipe-3-aulas/,200,"Agentes na Clínica — Caderno de Saúde: o administrativo para a IA, as pessoas para a equipe (3 aulas) | INEMA.club",88,0,10
+https://www.inema.club/cursos/267-agentes-no-contabil-e-no-financeiro-caderno-ate-a-porta-da-assinatura-e-nunca-alem-3-aulas/,200,"Agentes no Contábil e no Financeiro — Caderno: até a porta da assinatura, e nunca além (3 aulas) | INEMA.club",88,0,10
+https://www.inema.club/cursos/268-agentes-no-escritorio-de-advocacia-caderno-a-primeira-leitura-nunca-a-ultima-palavra-3-aulas/,200,"Agentes no Escritório de Advocacia — Caderno: a primeira leitura, nunca a última palavra (3 aulas) | INEMA.club",88,0,10
+https://www.inema.club/cursos/224-agnesfree-analise-profunda-da-agnes-ai-texto-imagem-e-video-a-us-0/,200,"AgnesFree — Análise profunda da Agnes AI (texto, imagem e vídeo a US$ 0) | INEMA.club",85,0,10
+https://www.inema.club/cursos/184-ai-filmmaking-parte-1/,200,AI Filmmaking — Parte 1 | INEMA.club,88,0,10
+https://www.inema.club/cursos/186-alerta-ia-2028-a-ia-que-constroi-a-proxima-ia/,200,Alerta IA 2028 — A IA que constrói a próxima IA | INEMA.club,89,0,10
+https://www.inema.club/cursos/185-anuncios-virais-com-ia/,200,Anúncios Virais com IA | INEMA.club,88,0,10
+https://www.inema.club/cursos/307-areas-do-inema-eventos-o-que-e-cada-area/,200,Áreas do INEMA Eventos — O que é cada área | INEMA.club,87,0,10
+https://www.inema.club/cursos/309-areas-do-inema-eventos-v6-2-o-que-e-cada-area/,200,Áreas do INEMA Eventos v6.2 — O que é cada área | INEMA.club,90,0,10
+https://www.inema.club/cursos/204-arquiteto-de-execucao-paralelo-sequencial-para-agentes/,200,Arquiteto de Execução — Paralelo × Sequencial para Agentes | INEMA.club,85,0,10
+https://www.inema.club/cursos/259-arquiteto-de-trabalho-com-ia-redesenhe-processos-para-humanos-dirigirem-e-agentes-executarem-8-aulas/,200,Arquiteto de Trabalho com IA — Redesenhe processos para humanos dirigirem e agentes executarem (8 aulas) | INEMA.club,88,0,10
+https://www.inema.club/cursos/257-astra-5-pedidos-de-verdade-ia-para-o-seu-trabalho-gpt-6-astra/,200,Astra: 5 Pedidos de Verdade — IA para o seu trabalho (GPT-6 Astra) | INEMA.club,87,0,10
+https://www.inema.club/cursos/234-auditoria-de-ablacao-enxugue-seu-claude-code-sem-perder-qualidade/,200,Auditoria de Ablação — Enxugue seu Claude Code sem perder qualidade | INEMA.club,88,0,10
+https://www.inema.club/cursos/177-33-viral-hooks/,200,33 Viral Hooks | INEMA.club,92,0,10
+https://www.inema.club/cursos/251-formacao-vendas-com-ia-1-43-oportunidades-de-ganhar-dinheiro-com-ia/,200,Formação Vendas com IA 1 — 43 Oportunidades de Ganhar Dinheiro com IA | INEMA.club,87,0,10
+https://www.inema.club/cursos/252-formacao-vendas-com-ia-2-playbook-de-consultoria-em-ia/,200,Formação Vendas com IA 2 — Playbook de Consultoria em IA | INEMA.club,87,0,10
+https://www.inema.club/cursos/253-formacao-vendas-com-ia-3-fundamentos-de-vender-ia/,200,Formação Vendas com IA 3 — Fundamentos de Vender IA | INEMA.club,87,0,10
+https://www.inema.club/cursos/254-formacao-vendas-com-ia-4-do-zero-ao-primeiro-cliente-de-ia/,200,Formação Vendas com IA 4 — Do Zero ao Primeiro Cliente de IA | INEMA.club,87,0,10
+https://www.inema.club/cursos/174-o-caminho-certo-da-ia/,200,O Caminho Certo da IA | INEMA.club,92,0,10
+https://www.inema.club/cursos/60-2cerebro-segundo-cerebro-com-llm-obsidian/,200,2Cerebro - Segundo Cerebro com LLM + Obsidian | INEMA.club,92,0,10
+https://www.inema.club/cursos/93-5-niveis-do-claude-code/,200,5 Níveis do Claude Code | INEMA.club,85,0,10
+https://www.inema.club/cursos/68-6-chapeus-anti-ancora/,200,6 Chapeus + Anti-Ancora | INEMA.club,79,0,10
+https://www.inema.club/cursos/43-6-pilares-do-claude-code/,200,6 Pilares do Claude Code | INEMA.club,90,0,10
+https://www.inema.club/cursos/46-6-pilares-do-claude-code-completa/,200,6 Pilares do Claude Code - Completa | INEMA.club,92,0,10
+https://www.inema.club/cursos/57-8020-vendas-gestao-e-estrategia-comercial/,200,"8020 - Vendas, Gestão e Estratégia Comercial | INEMA.club",90,0,10
+https://www.inema.club/cursos/90-agente-hermes-assistente-ia-self-hosted/,200,Agente Hermes - Assistente IA Self-Hosted | INEMA.club,93,0,10
+https://www.inema.club/cursos/175-agente-hermes-ollama-seu-so-de-ia-100-privado/,200,Agente Hermes + Ollama — Seu SO de IA 100% Privado | INEMA.club,91,0,10
+https://www.inema.club/cursos/42-agentic-engineering-masterclass/,200,Agentic Engineering Masterclass | INEMA.club,89,0,10
+https://www.inema.club/cursos/91-agentic-os-o-sistema-operacional-do-trabalho-com-ia/,200,Agentic OS - O Sistema Operacional do Trabalho com IA | INEMA.club,82,0,10
+https://www.inema.club/cursos/140-ai-filmmaking-do-conceito-ao-filme-final/,200,AI FILMMAKING — Do Conceito ao Filme Final | INEMA.club,91,0,10
+https://www.inema.club/cursos/151-ai-strategy-factory-estrategia-de-ia-completa-para-qualquer-empresa/,200,AI Strategy Factory — Estratégia de IA Completa para Qualquer Empresa | INEMA.club,92,0,10
+https://www.inema.club/cursos/114-aios-ai-agent-operating-system/,200,AIOS — AI Agent Operating System | INEMA.club,89,0,10
+https://www.inema.club/cursos/133-ais-os-seu-ai-operating-system-no-claude-code/,200,AIS-OS — Seu AI Operating System no Claude Code | INEMA.club,85,0,10
+https://www.inema.club/cursos/212-aiv-2026-ai-visibility-como-servico-aeo-geo/,200,AIV 2026 — AI Visibility como serviço (AEO/GEO) | INEMA.club,86,0,10
+https://www.inema.club/cursos/1-aiwcf-vibe-coding/,200,AIWCF - Vibe Coding | INEMA.club,88,0,10
+https://www.inema.club/cursos/156-antigravity-do-zero-ao-app-publicado-com-ia/,200,AntiGravity — do Zero ao App Publicado com IA | INEMA.club,91,0,10
+https://www.inema.club/cursos/52-arquitetura-2030-arquitetura-de-software-com-ia/,200,Arquitetura 2030 - Arquitetura de Software com IA | INEMA.club,90,0,10
+https://www.inema.club/cursos/159-arquitetura-de-intencao-imersao-intensiva-4-dias/,200,Arquitetura de Intenção — Imersão Intensiva (4 dias) | INEMA.club,91,0,10
+https://www.inema.club/cursos/160-arquitetura-de-intencao-da-ia-curso-completo-metodo-jarvis/,200,Arquitetura de Intenção da IA — Curso Completo (Método JARVIS) | INEMA.club,91,0,10
+https://www.inema.club/cursos/206-automacao-hooks-no-claude-code/,200,Automação & Hooks no Claude Code | INEMA.club,88,0,10
+https://www.inema.club/cursos/3-automacao-2026/,200,Automação 2026 | INEMA.club,74,0,10
+https://www.inema.club/cursos/4-bmad-academy/,200,BMAD Academy | INEMA.club,68,0,10
+https://www.inema.club/cursos/53-cca-q1-claude-certified-architect-foundations/,200,CCA-Q1 - Claude Certified Architect Foundations | INEMA.club,81,0,10
+https://www.inema.club/cursos/54-cca-q2-claude-certified-architect-interativo/,200,CCA-Q2 - Claude Certified Architect Interativo | INEMA.club,72,0,10
+https://www.inema.club/cursos/204-cccache-prompt-caching-no-claude-code/,200,cccache — Prompt Caching no Claude Code | INEMA.club,90,0,10
+https://www.inema.club/cursos/72-ccfast32-32-hacks-do-claude-code/,200,CCFast32 - 32 Hacks do Claude Code | INEMA.club,94,0,10
+https://www.inema.club/cursos/37-ccguide-claude-code-2026/,200,CCGuide - Claude Code 2026 | INEMA.club,90,0,10
+https://www.inema.club/cursos/70-ccmastermemory-memory-injection-via-hooks/,200,CCMasterMemory - Memory Injection via Hooks | INEMA.club,90,0,10
+https://www.inema.club/cursos/75-ccopen-claude-code-de-graca-ou-por-quase-nada/,200,CCOpen - Claude Code de Graça ou por Quase Nada | INEMA.club,92,0,10
+https://www.inema.club/cursos/69-cctop-mestre-em-contexto-e-tokens/,200,CCTop - Mestre em Contexto e Tokens | INEMA.club,90,0,10
+https://www.inema.club/cursos/102-ccxcx-claude-e-codex-tool-agnostic-ai-coding/,200,CCXCX - Claude e Codex Tool-Agnostic AI Coding | INEMA.club,90,0,10
+https://www.inema.club/cursos/171-cerebro-inema-segundo-cerebro-com-3-cerebros/,200,Cérebro INEMA — Segundo Cérebro com 3 Cérebros | INEMA.club,91,0,10
+https://www.inema.club/cursos/131-claude-code-do-zero-ao-projeto/,200,Claude Code — Do Zero ao Projeto | INEMA.club,92,0,10
+https://www.inema.club/cursos/157-claude-code-na-pratica-do-zero-ao-produto/,200,Claude Code na Prática — do Zero ao Produto | INEMA.club,92,0,10
+https://www.inema.club/cursos/59-claude-code-deep-dive/,200,Claude Code Deep Dive | INEMA.club,93,0,10
+https://www.inema.club/cursos/136-claude-code-tier-s-os-12-recursos-que-mudam-seu-dia/,200,Claude Code Tier S — os 12 recursos que mudam seu dia | INEMA.club,92,0,10
+https://www.inema.club/cursos/139-claude-code-remotion-motion-graphics-com-codigo/,200,Claude Code × Remotion - Motion Graphics com Código | INEMA.club,91,0,10
+https://www.inema.club/cursos/105-claude-cowork-equipe-de-marketing-de-us-10-000-mes/,200,Claude Cowork - Equipe de Marketing de US$ 10.000/mês | INEMA.club,90,0,10
+https://www.inema.club/cursos/107-claude-cowork-guia-completo/,200,Claude Cowork - Guia Completo | INEMA.club,89,0,10
+https://www.inema.club/cursos/66-claude-design-zero-ao-expert/,200,Claude Design - Zero ao Expert | INEMA.club,79,0,10
+https://www.inema.club/cursos/155-claude-skills-na-pratica-construa-agent-skills-do-claude-code/,200,Claude Skills na Prática — Construa Agent Skills do Claude Code | INEMA.club,90,0,10
+https://www.inema.club/cursos/196-claude-video-watch-input-de-video-multi-host-claude-code-codex-50/,200,"claude-video — /watch: input de vídeo multi-host (Claude Code, Codex, +50) | INEMA.club",87,0,10
+https://www.inema.club/cursos/166-claude-watch-watch-analista-de-video-com-report-obsidian/,200,claude-watch — /watch: analista de vídeo com report + Obsidian | INEMA.club,91,0,10
+https://www.inema.club/cursos/55-cli-x-o-terminal-como-interface-dos-agentes/,200,CLI-x - O Terminal como Interface dos Agentes | INEMA.club,92,0,10
+https://www.inema.club/cursos/167-cli-printing-press-imprima-clis-perfeitas-para-agentes/,200,CLI Printing Press — Imprima CLIs Perfeitas para Agentes | INEMA.club,93,0,10
+https://www.inema.club/cursos/218-construa-seu-ai-os-assistente-de-ia-pessoal-sem-programar/,200,Construa seu AI OS — Assistente de IA pessoal sem programar | INEMA.club,90,0,10
+https://www.inema.club/cursos/263-copilot-agentes-para-empresas-do-trabalho-com-ia-a-automacao-dos-processos-corporativos/,200,Copilot + Agentes para Empresas — Do trabalho com IA à automação dos processos corporativos | INEMA.club,91,0,10
+https://www.inema.club/cursos/83-curso-open-design-alternativa-open-source-ao-claude-design/,200,Curso Open Design - Alternativa Open-Source ao Claude Design | INEMA.club,94,0,10
+https://www.inema.club/cursos/5-dashboard-mastery/,200,Dashboard Mastery | INEMA.club,76,0,10
+https://www.inema.club/cursos/6-dba-fo/,200,DBA-FO | INEMA.club,45,0,6
+https://www.inema.club/cursos/82-deepclaudex-multi-modelo-70-20-10/,200,DeepClaudeX - Multi-Modelo 70/20/10 | INEMA.club,91,0,10
+https://www.inema.club/cursos/64-deerflow-2-0-framework-de-agentes-bytedance/,200,DeerFlow 2.0 - Framework de Agentes ByteDance | INEMA.club,90,0,10
+https://www.inema.club/cursos/65-design-video-com-ia-hyperframes/,200,Design + Video com IA (Hyperframes) | INEMA.club,91,0,10
+https://www.inema.club/cursos/51-dev2k6-engenharia-de-software-com-ia-avancada/,200,DEV2K6 - Engenharia de Software com IA Avançada | INEMA.club,90,0,10
+https://www.inema.club/cursos/147-diretor-de-animacao-imagens-narracao-viram-filme/,200,Diretor de Animação — Imagens + Narração viram Filme | INEMA.club,88,0,10
+https://www.inema.club/cursos/76-docker-openclaw-assistente-ia-autonomo-e-multi-canal/,200,Docker OpenClaw - Assistente IA Autônomo e Multi-Canal | INEMA.club,92,0,10
+https://www.inema.club/cursos/122-dominando-o-opus-4-8/,200,Dominando o Opus 4.8 | INEMA.club,71,0,10
+https://www.inema.club/cursos/7-eai-games-educativos/,200,EAI - Games Educativos | INEMA.club,53,0,8
+https://www.inema.club/cursos/44-engenharia-agentic-workflow/,200,Engenharia Agentic - Workflow | INEMA.club,89,0,10
+https://www.inema.club/cursos/97-engenharia-de-dados-com-ia/,200,Engenharia de Dados com IA | INEMA.club,90,0,10
+https://www.inema.club/cursos/188-engenharia-de-sistemas-operacionais-de-ia-do-zero-ao-os-vivo/,200,Engenharia de Sistemas Operacionais de IA — do zero ao OS vivo | INEMA.club,90,0,10
+https://www.inema.club/cursos/106-ensinando-claude-cowork-playbook-para-treinadores/,200,Ensinando Claude Cowork - Playbook para Treinadores | INEMA.club,90,0,10
+https://www.inema.club/cursos/47-enxames-de-agentes-de-ia/,200,Enxames de Agentes de IA | INEMA.club,89,0,10
+https://www.inema.club/cursos/158-fable-lite-garimpando-o-raciocinio-dos-modelos/,200,Fable Lite — Garimpando o Raciocínio dos Modelos | INEMA.club,89,0,10
+https://www.inema.club/cursos/9-fdf-designers-do-futuro/,200,FDF - Designers do Futuro | INEMA.club,73,0,10
+https://www.inema.club/cursos/11-fei-engenharia-da-intencao/,200,FEI - Engenharia da Intenção | INEMA.club,84,0,10
+https://www.inema.club/cursos/265-fep-2026-a-agi-chegou-e-o-prompt-quase-morreu-7-aulas/,200,FEP 2026 — A AGI chegou e o prompt quase morreu (7 aulas) | INEMA.club,87,0,10
+https://www.inema.club/cursos/261-fep-agi-do-prompt-a-intencao-9-aulas/,200,FEP → AGI — Do prompt à intenção (9 aulas) | INEMA.club,88,0,10
+https://www.inema.club/cursos/38-fep2-prompt-engineering-masterclass/,200,FEP2 - Prompt Engineering Masterclass | INEMA.club,87,0,10
+https://www.inema.club/cursos/13-fetd-engenharia-de-treinamentos-de-dados/,200,FETD - Engenharia de Treinamentos de Dados | INEMA.club,65,0,10
+https://www.inema.club/cursos/14-fgmd-gatilhos-mentais-digitais/,200,FGMD - Gatilhos Mentais Digitais | INEMA.club,75,0,10
+https://www.inema.club/cursos/15-fia2026/,200,FIA2026 | INEMA.club,86,0,10
+https://www.inema.club/cursos/219-formacao-cinema-com-ia/,200,Formação Cinema com IA | INEMA.club,87,0,10
+https://www.inema.club/cursos/128-formacao-em-ia-incorporada-vla-a-escola-da-robotica-inteligente/,200,Formação em IA Incorporada (VLA) — A Escola da Robótica Inteligente | INEMA.club,75,0,10
+https://www.inema.club/cursos/230-formacao-ia-pedir-bem-ja-nao-basta-mais/,200,Formação IA — Pedir bem já não basta mais | INEMA.club,85,0,10
+https://www.inema.club/cursos/246-formacao-webmcp-sites-e-agentes-do-zero-ao-expert/,200,Formação WebMCP — Sites e Agentes do Zero ao Expert | INEMA.club,81,0,10
+https://www.inema.club/cursos/247-formacao-webmcp-2-builder/,200,Formação WebMCP 2 — Builder | INEMA.club,77,0,10
+https://www.inema.club/cursos/248-formacao-webmcp-3-integrator/,200,Formação WebMCP 3 — Integrator | INEMA.club,76,0,10
+https://www.inema.club/cursos/249-formacao-webmcp-4-agent-developer/,200,Formação WebMCP 4 — Agent Developer | INEMA.club,80,0,10
+https://www.inema.club/cursos/250-formacao-webmcp-5-expert/,200,Formação WebMCP 5 — Expert | INEMA.club,86,0,10
+https://www.inema.club/cursos/61-fpfilm-crie-filmes-com-ia/,200,FPFilm - Crie Filmes com IA | INEMA.club,89,0,10
+https://www.inema.club/cursos/16-ftd-formacao-transformacao-digital/,200,FTD - Formação Transformação Digital | INEMA.club,53,0,8
+https://www.inema.club/cursos/17-fth-treinamento-de-humanoides/,200,FTH - Treinamento de Humanoides | INEMA.club,78,0,10
+https://www.inema.club/cursos/19-gipm-projetos-com-ia-governada/,200,GIPM - Projetos com IA Governada | INEMA.club,87,0,10
+https://www.inema.club/cursos/18-github/,200,GitHub | INEMA.club,47,0,7
+https://www.inema.club/cursos/262-gpt-6-astra-na-pratica-delegue-a-tarefa-inteira-ao-novo-assistente-sem-programar-8-aulas/,200,"GPT-6 Astra na prática — Delegue a tarefa inteira ao novo assistente, sem programar (8 aulas) | INEMA.club",88,0,10
+https://www.inema.club/cursos/232-graph-engineering-de-loops-a-grafos/,200,Graph Engineering — De Loops a Grafos | INEMA.club,87,0,10
+https://www.inema.club/cursos/229-guia-de-engenharia-de-ia-local-do-hardware-ao-enxame-de-agentes/,200,Guia de Engenharia de IA Local — Do hardware ao enxame de agentes | INEMA.club,88,0,10
+https://www.inema.club/cursos/180-grill-me-extraia-o-que-esta-na-sua-cabeca/,200,Grill Me — Extraia o que está na sua cabeça | INEMA.club,91,0,10
+https://www.inema.club/cursos/56-hack-do-algoritmo-meta-2026/,200,Hack do Algoritmo Meta 2026 | INEMA.club,90,0,10
+https://www.inema.club/cursos/168-harness-engenharia-agentica-de-matt-pocock/,200,HARNESS — Engenharia Agêntica de Matt Pocock | INEMA.club,89,0,10
+https://www.inema.club/cursos/191-healthos-coach-de-saude-pessoal-com-ia/,200,HealthOS — Coach de Saúde Pessoal com IA | INEMA.club,90,0,10
+https://www.inema.club/cursos/104-hermes-notebooklm-o-sistema-de-agente-ai-definitivo/,200,Hermes + NotebookLM - O Sistema de Agente AI Definitivo | INEMA.club,89,0,10
+https://www.inema.club/cursos/124-hermes-21c-todos-os-conceitos-do-hermes/,200,Hermes 21C — Todos os Conceitos do Hermes | INEMA.club,89,0,10
+https://www.inema.club/cursos/113-hermes-agent-curso-completo-avancado/,200,Hermes Agent — Curso Completo Avançado | INEMA.club,91,0,10
+https://www.inema.club/cursos/20-hg1-academia-dos-humanoides-g1/,200,HG1 - Academia dos Humanoides G1 | INEMA.club,66,0,10
+https://www.inema.club/cursos/264-ia-do-zero-os-primeiros-pedidos-de-quem-nunca-usou-ia-com-o-porque-de-cada-um-4-aulas/,200,"IA do Zero — Os primeiros pedidos de quem nunca usou IA, com o porquê de cada um (4 aulas) | INEMA.club",91,0,10
+https://www.inema.club/cursos/101-iamasters-os-sistema-operativo-agentico/,200,iAmasters OS - Sistema Operativo Agêntico | INEMA.club,90,0,10
+https://www.inema.club/cursos/62-iamed-medico-ia-native/,200,IAMed - Medico IA-Native | INEMA.club,90,0,10
+https://www.inema.club/cursos/78-iclaudex-planejamento-inteligente-com-claude-codex/,200,iClaudeX - Planejamento Inteligente com Claude + Codex | INEMA.club,92,0,10
+https://www.inema.club/cursos/176-inema-ncia-habilidades-humanas-na-era-da-ia/,200,INEMA.NCIA — Habilidades Humanas na Era da IA | INEMA.club,89,0,10
+https://www.inema.club/cursos/145-inemaref-foto-vira-historia-em-quadrinhos/,200,inemaref — Foto vira história em quadrinhos | INEMA.club,89,0,10
+https://www.inema.club/cursos/71-intelecto-inteligencia-pessoal-sem-frameworks-inchados/,200,INTELECTO - Inteligência Pessoal sem Frameworks Inchados | INEMA.club,89,0,10
+https://www.inema.club/cursos/181-jarvis-seu-sistema-operacional-de-ia/,200,Jarvis — Seu Sistema Operacional de IA | INEMA.club,92,0,10
+https://www.inema.club/cursos/118-karpathy-guidelines-4-principios-para-codigo-limpo-com-llm/,200,Karpathy Guidelines — 4 Princípios para Código Limpo com LLM | INEMA.club,90,0,10
+https://www.inema.club/cursos/226-kit-local-o-laboratorio-local/,200,Kit Local — O Laboratório Local | INEMA.club,86,0,10
+https://www.inema.club/cursos/182-llms-orquestradas-multi-llm-fugu-ultra-e-openrouter-fusion/,200,"LLMs Orquestradas — Multi-LLM, Fugu Ultra e OpenRouter Fusion | INEMA.club",90,0,10
+https://www.inema.club/cursos/169-loop-agentes-v2-engenharia-de-loops/,200,Loop Agentes v2 — Engenharia de Loops | INEMA.club,91,0,10
+https://www.inema.club/cursos/170-loop-engineering-sistemas-com-ia-no-loop/,200,Loop Engineering — Sistemas com IA no Loop | INEMA.club,91,0,10
+https://www.inema.club/cursos/225-maestro-roteador-triagem-de-modelo-e-esforco/,200,Maestro Roteador — Triagem de Modelo e Esforço | INEMA.club,86,0,10
+https://www.inema.club/cursos/21-make-automacoes/,200,MAKE - Automações | INEMA.club,87,0,10
+https://www.inema.club/cursos/79-makeclaudex-engenharia-com-claude-code-do-prompt-ao-plugin/,200,MakeClaudeX - Engenharia com Claude Code: Do Prompt ao Plugin | INEMA.club,93,0,10
+https://www.inema.club/cursos/81-master-codex-a-fabrica-de-saas-com-agentes-de-ia/,200,Master Codex - A Fábrica de SaaS com Agentes de IA | INEMA.club,91,0,10
+https://www.inema.club/cursos/49-mirofish-ecossistema-de-predicao-multiagente/,200,MiroFish - Ecossistema de Predição Multiagente | INEMA.club,88,0,10
+https://www.inema.club/cursos/115-mkblogs-publicacao-multi-plataforma/,200,MkBlogs — Publicação Multi-Plataforma | INEMA.club,90,0,10
+https://www.inema.club/cursos/141-mdd-mestre-de-direcao-dinamica/,200,MDD — Mestre de Direção Dinâmica | INEMA.club,90,0,10
+https://www.inema.club/cursos/116-mkbook-seu-livro-em-30-dias-com-claude-code/,200,mkbook — Seu livro em 30 dias com Claude Code | INEMA.club,90,0,10
+https://www.inema.club/cursos/137-mkivideos-fila-de-videos-com-ia/,200,mkivideos — Fila de Vídeos com IA | INEMA.club,89,0,10
+https://www.inema.club/cursos/86-multiagentes-equipes-de-agentes-na-pratica/,200,Multiagentes - Equipes de Agentes na Prática | INEMA.club,91,0,10
+https://www.inema.club/cursos/22-n8nb-fundamentos-n8n/,200,N8Nb - Fundamentos N8N | INEMA.club,76,0,10
+https://www.inema.club/cursos/23-n8np/,200,N8Np | INEMA.club,76,0,10
+https://www.inema.club/cursos/24-nanobanana-supercurso-nano-banana/,200,NanoBanana - SuperCurso Nano Banana | INEMA.club,86,0,10
+https://www.inema.club/cursos/103-new-agentic-os-do-executivo-ao-jarvis-multi-cliente/,200,New Agentic OS - Do Executivo ao Jarvis Multi-Cliente | INEMA.club,90,0,10
+https://www.inema.club/cursos/40-notebooklm-do-zero-ao-avancado/,200,NotebookLM - Do Zero ao Avançado | INEMA.club,91,0,10
+https://www.inema.club/cursos/217-nvidia-api-free-console-gratuito-para-100-modelos-de-ia/,200,NVIDIA API Free — Console gratuito para 100+ modelos de IA | INEMA.club,85,0,10
+https://www.inema.club/cursos/153-o-manual-oculto-da-ia-do-fundamento-ao-cerebro-do-fable/,200,O Manual Oculto da IA — do Fundamento ao Cérebro do Fable | INEMA.club,91,0,10
+https://www.inema.club/cursos/179-o-mundo-apos-o-claude/,200,O Mundo Após o Claude | INEMA.club,90,0,10
+https://www.inema.club/cursos/119-openhuman-mastery/,200,OpenHuman Mastery | INEMA.club,89,0,10
+https://www.inema.club/cursos/67-opus-4-7-dominando-o-claude-code/,200,Opus 4.7 - Dominando o Claude Code | INEMA.club,91,0,10
+https://www.inema.club/cursos/210-os-coach-voce-constroi-a-base-do-seu-os-agentico/,200,OS Coach — Você Constrói a Base do Seu OS Agêntico | INEMA.club,88,0,10
+https://www.inema.club/cursos/306-os-super-agentes-chegaram-o-que-muda-no-seu-trabalho-quando-a-ia-deixa-de-esperar-ordens-6-aulas/,200,Os Super-Agentes Chegaram — O que muda no seu trabalho quando a IA deixa de esperar ordens (6 aulas) | INEMA.club,88,0,10
+https://www.inema.club/cursos/279-oswork-v5-organize-seu-ambiente-de-ia/,200,OSWork v5 — Organize seu ambiente de IA | INEMA.club,89,0,10
+https://www.inema.club/cursos/280-oswork-quick-organize-seu-ambiente-de-ia-em-77-minutos/,200,OSWork Quick — Organize seu ambiente de IA em 77 minutos | INEMA.club,89,0,10
+https://www.inema.club/cursos/149-padroes-de-system-prompts-anatomia-catalogo-e-evolucao/,200,"Padrões de System Prompts — Anatomia, Catálogo e Evolução | INEMA.club",91,0,10
+https://www.inema.club/cursos/146-piramide-da-ia-engenharia-de-conhecimento-da-ia/,200,Pirâmide da IA — Engenharia de Conhecimento da IA | INEMA.club,90,0,10
+https://www.inema.club/cursos/144-pixflow-imagens-estaticas-viram-filme/,200,PixFlow — Imagens estáticas viram filme | INEMA.club,85,0,10
+https://www.inema.club/cursos/25-playbook-formacao-consultor-ia-ingles/,200,Playbook - Formação Consultor IA - Inglês | INEMA.club,62,0,10
+https://www.inema.club/cursos/26-playbook-ia-formacao-de-consultoria-ia/,200,Playbook-IA - Formação de Consultoria IA | INEMA.club,86,0,10
+https://www.inema.club/cursos/111-polyskills-claude-code-codex-lado-a-lado/,200,PolySkills — Claude Code & Codex lado a lado | INEMA.club,92,0,10
+https://www.inema.club/cursos/58-por-dentro-do-claude-code/,200,Por Dentro do Claude Code | INEMA.club,92,0,10
+https://www.inema.club/cursos/27-portal-inema/,200,Portal INEMA | INEMA.club,59,0,8
+https://www.inema.club/cursos/88-power-design-os-20-principios/,200,Power Design - Os 20 Princípios | INEMA.club,91,0,10
+https://www.inema.club/cursos/95-printing-press-cli-para-agentes-de-ia/,200,Printing Press - CLI para Agentes de IA | INEMA.club,91,0,10
+https://www.inema.club/cursos/308-produtos-na-era-da-ia-v6-saber-o-que-vale-a-pena-construir/,200,Produtos na era da IA v6 — Saber o que vale a pena construir | INEMA.club,89,0,10
+https://www.inema.club/cursos/99-prompt-director-imagens-e-cinema-com-ia/,200,Prompt Director - Imagens e Cinema com IA | INEMA.club,90,0,10
+https://www.inema.club/cursos/193-prompting-claude-fable-5-2-trilhas-14-modulos/,200,"Prompting Claude Fable 5 — 2 Trilhas, 14 Módulos | INEMA.club",89,0,10
+https://www.inema.club/cursos/28-prompts/,200,Prompts | INEMA.club,84,0,10
+https://www.inema.club/cursos/154-prompts-prontos-13-system-prompts-copiaveis/,200,Prompts Prontos — 13 System Prompts Copiáveis | INEMA.club,89,0,10
+https://www.inema.club/cursos/221-prospector-agent-esteira-de-prospeccao-e-venda-de-sites/,200,Prospector Agent — Esteira de prospecção e venda de sites | INEMA.club,85,0,10
+https://www.inema.club/cursos/223-recursos-de-video-catalogo-do-ecossistema-inema/,200,Recursos de Vídeo — Catálogo do Ecossistema INEMA | INEMA.club,84,0,10
+https://www.inema.club/cursos/138-remotion-video-programatico-com-react/,200,Remotion - Vídeo Programático com React | INEMA.club,87,0,10
+https://www.inema.club/cursos/29-robot/,200,Robot | INEMA.club,74,0,10
+https://www.inema.club/cursos/80-ruflo-orquestracao-de-agentes-multi-ia/,200,Ruflo - Orquestração de Agentes Multi-IA | INEMA.club,93,0,10
+https://www.inema.club/cursos/63-seedance-2-0-mastery-video-com-ia/,200,Seedance 2.0 Mastery - Video com IA | INEMA.club,91,0,10
+https://www.inema.club/cursos/123-segrobot-requalificacao-humana-para-ambientes-robotizados/,200,segROBOT — Requalificação Humana para Ambientes Robotizados | INEMA.club,81,0,10
+https://www.inema.club/cursos/207-segunda-opiniao-ia-para-gestores-e-lideres/,200,Segunda Opinião — IA para Gestores e Líderes | INEMA.club,87,0,10
+https://www.inema.club/cursos/189-segundo-cerebro-pro-claude-code-graphify-obsidian/,200,Segundo Cérebro pro Claude Code — Graphify + Obsidian | INEMA.club,91,0,10
+https://www.inema.club/cursos/233-seu-funcionario-digital-7-dias-de-automacao-com-claude-code/,200,Seu Funcionário Digital — 7 dias de automação com Claude Code | INEMA.club,90,0,10
+https://www.inema.club/cursos/30-shia-super-humanos-inteligencia-ampliada/,200,SHIA - Super Humanos Inteligência Ampliada | INEMA.club,87,0,10
+https://www.inema.club/cursos/130-skill-design-arsenal-de-skills-pra-melhorar-paginas/,200,Skill Design — Arsenal de Skills pra Melhorar Páginas | INEMA.club,89,0,10
+https://www.inema.club/cursos/117-skills-for-real-engineers/,200,Skills For Real Engineers | INEMA.club,91,0,10
+https://www.inema.club/cursos/96-skills-premium-do-iniciante-ao-expert/,200,Skills Premium - Do Iniciante ao Expert | INEMA.club,92,0,10
+https://www.inema.club/cursos/208-ssh-e-chaves-ssh-acesse-sua-vps-sem-depender-de-suporte/,200,SSH e Chaves SSH — Acesse sua VPS sem Depender de Suporte | INEMA.club,87,0,10
+https://www.inema.club/cursos/220-stickshift-painel-de-modelo-e-esforco-para-claude-code-e-codex/,200,StickShift — Painel de Modelo e Esforço para Claude Code e Codex | INEMA.club,86,0,10
+https://www.inema.club/cursos/150-subagentes-especialistas-do-claude-code/,200,Subagentes — Especialistas do Claude Code | INEMA.club,92,0,10
+https://www.inema.club/cursos/260-super-agentes-da-ia-que-responde-a-ia-que-trabalha-8-aulas/,200,Super-Agentes — Da IA que responde à IA que trabalha (8 aulas) | INEMA.club,88,0,10
+https://www.inema.club/cursos/73-superpowers-desenvolvimento-com-agentes-de-ia/,200,Superpowers - Desenvolvimento com Agentes de IA | INEMA.club,91,0,10
+https://www.inema.club/cursos/31-superprof/,200,SuperProf | INEMA.club,75,0,10
+https://www.inema.club/cursos/77-superskills-karpathy-transforme-skills-em-funcionarios-digitais/,200,SuperSkills Karpathy - Transforme Skills em Funcionários Digitais | INEMA.club,92,0,10
+https://www.inema.club/cursos/32-tds/,200,TDS | INEMA.club,63,0,8
+https://www.inema.club/cursos/272-terminal-e-harness-por-que-o-terminal-vence-o-chat/,200,Terminal e Harness — Por que o terminal vence o chat | INEMA.club,88,0,10
+https://www.inema.club/cursos/33-tiktok-shop/,200,TikTok Shop | INEMA.club,82,0,10
+https://www.inema.club/cursos/236-times-de-ia-curso-completo/,200,Times de IA — Curso Completo | INEMA.club,89,0,10
+https://www.inema.club/cursos/94-timesmarketing-3-automacao-de-conteudo-com-ia/,200,TimesMarketing 3 - Automação de Conteúdo com IA | INEMA.club,90,0,10
+https://www.inema.club/cursos/98-triad-automacao-de-ia-multi-modelo-com-hermes-e-deepseek/,200,TRIAD - Automação de IA Multi-Modelo com Hermes e DeepSeek | INEMA.club,89,0,10
+https://www.inema.club/cursos/120-understand-anything/,200,Understand Anything | INEMA.club,90,0,10
+https://www.inema.club/cursos/109-vendendo-aios-2026/,200,Vendendo AIOS 2026 | INEMA.club,89,0,10
+https://www.inema.club/cursos/172-vibe-coding-dominio-completo/,200,Vibe Coding: Domínio Completo | INEMA.club,91,0,10
+https://www.inema.club/cursos/48-vibe-coding-imersao-do-zero-ao-saas/,200,Vibe Coding Imersão - Do Zero ao SaaS | INEMA.club,89,0,10
+https://www.inema.club/cursos/173-vibe-coding-na-pratica/,200,Vibe Coding na Prática | INEMA.club,90,0,10
+https://www.inema.club/cursos/195-videos-edit-curso-forja-reel-monte-seu-editor-de-reels-com-ia/,200,videos-edit-curso — Forja Reel: monte seu editor de reels com IA | INEMA.club,89,0,10
+https://www.inema.club/cursos/135-video-demonstrativo-walkthroughs-de-app-com-claude-code/,200,Vídeo Demonstrativo — Walkthroughs de app com Claude Code | INEMA.club,90,0,10
+https://www.inema.club/cursos/227-video-demonstrativo-walkthrough-narrado-do-seu-app/,200,video-demonstrativo — Walkthrough narrado do seu app | INEMA.club,87,0,10
+https://www.inema.club/cursos/228-video-explicativo-video-narrado-a-partir-de-um-assunto/,200,video-explicativo — Vídeo narrado a partir de um assunto | INEMA.club,87,0,10
+https://www.inema.club/cursos/231-workshop-avancado-de-engenharia-de-software-com-ia/,200,Workshop Avançado de Engenharia de Software com IA | INEMA.club,94,0,10
+https://www.inema.club/cursos/142-video-plan-editor-plano-de-edicao-de-video/,200,video-plan-editor — Plano de Edição de Vídeo | INEMA.club,89,0,10
+https://www.inema.club/cursos/143-videoprodutor-o-produtor-de-video-profissional/,200,videoprodutor — O Produtor de Vídeo Profissional | INEMA.club,87,0,10
+https://www.inema.club/cursos/148-videos-cursos-inema-cursos-viram-videos-narrados/,200,videos-cursos-inema — Cursos viram vídeos narrados | INEMA.club,78,0,10
+https://www.inema.club/cursos/35-visionpro-construcao-audiovisual-com-ia/,200,VisionPro - Construção Audiovisual com IA | INEMA.club,88,0,10
+https://www.inema.club/cursos/126-vla-vision-language-action-para-robotica/,200,VLA — Vision Language Action para Robótica | INEMA.club,73,0,10
+https://www.inema.club/cursos/127-vla-mastery-da-teoria-aos-robos-que-agem/,200,VLA Mastery — Da Teoria aos Robôs que Agem | INEMA.club,76,0,10
+https://www.inema.club/cursos/211-wacrm-crm-self-hostable-para-whatsapp/,200,wacrm — CRM self-hostable para WhatsApp | INEMA.club,74,0,10
+https://www.inema.club/cursos/215-war-game-prompt-planeje-qualquer-build-como-um-war-game/,200,War Game Prompt — planeje qualquer build como um war game | INEMA.club,85,0,10
+https://www.inema.club/cursos/36-webp-designer-2026/,200,WebP - Designer 2026 | INEMA.club,88,0,10
+https://www.inema.club/cursos/108-whatsapp-username-bsuid/,200,WhatsApp Username & BSUID | INEMA.club,99,0,10
+https://www.inema.club/cursos/178-transicao-para-o-claude-code/,200,Transição para o Claude Code | INEMA.club,92,0,10
+https://www.inema.club/cursos/197-pha-2030-potencial-humano-aumentado/,200,PHA 2030 — Potencial Humano Aumentado | INEMA.club,84,0,10
+https://www.inema.club/cursos/198-profissional-2027-implementador-de-ia-para-pmes/,200,Profissional 2027 — Implementador de IA para PMEs | INEMA.club,84,0,10
+https://www.inema.club/cursos/199-mcp-model-context-protocol-do-zero/,200,MCP — Model Context Protocol do Zero | INEMA.club,84,0,10
+https://www.inema.club/cursos/200-intelecto-4d-workshop-do-zero-ao-jarvis/,200,INTELECTO 4D — Workshop do Zero ao Jarvis | INEMA.club,84,0,10
+https://www.inema.club/cursos/201-hyperframes-videos-explicativos-com-claude-code/,200,HyperFrames — Vídeos Explicativos com Claude Code | INEMA.club,84,0,10
+https://www.inema.club/cursos/202-inema-ncia-leitura-editorial/,200,INEMA.NCIA — Leitura Editorial | INEMA.club,84,0,10
+https://www.inema.club/cursos/203-skills-cli-do-zero-ao-expert-em-agent-skills/,200,Skills CLI — do Zero ao Expert em Agent Skills | INEMA.club,84,0,10
+https://www.inema.club/cursos/237-sites-3d-e-cinematograficos-curso-completo/,200,Sites 3D e Cinematográficos — Curso Completo | INEMA.club,86,0,10
+https://www.inema.club/cursos/235-times-de-ia-curso-completo/,200,Times de IA — Curso Completo | INEMA.club,87,0,10
+https://www.inema.club/cursos/238-assistente-de-voz-jarvis-case-cia/,200,"Assistente de Voz — JARVIS, CASE & CIA | INEMA.club",87,0,10
+https://www.inema.club/cursos/240-inema-command-language-domine-os-100-comandos/,200,INEMA Command Language — Domine os 100 Comandos | INEMA.club,87,0,10
+https://www.inema.club/cursos/241-social-media-seu-funcionario-de-conteudo/,200,Social Media — Seu Funcionario de Conteudo | INEMA.club,88,0,10
+https://www.inema.club/cursos/242-extras-e-comparacoes-complementos-do-workshop/,200,Extras e Comparacoes — Complementos do Workshop | INEMA.club,87,0,10
+https://www.inema.club/cursos/243-agentes-de-voz-comerciais-venda-o-servico/,200,Agentes de Voz Comerciais — Venda o Servico | INEMA.club,88,0,10
+https://www.inema.club/cursos/244-fabrica-de-videos-e-anuncios-com-ia/,200,Fabrica de Videos e Anuncios com IA | INEMA.club,87,0,10
+https://www.inema.club/cursos/245-sites-e-apps-construa-e-revenda/,200,Sites e Apps — Construa e Revenda | INEMA.club,87,0,10
+https://www.inema.club/api/updates/,200,,0,0,0

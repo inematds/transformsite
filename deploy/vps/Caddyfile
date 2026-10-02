@@ -1,0 +1,8 @@
+{$DOMAIN} {
+	encode gzip
+	reverse_proxy app:8000
+}
+
+{$EVOLUTION_DOMAIN} {
+	reverse_proxy evolution:8080
+}

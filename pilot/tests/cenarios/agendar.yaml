@@ -1,0 +1,107 @@
+# Roteiros de conversa. Rode: transformsite eval --scenarios tests/cenarios
+# clock fixo: segunda 05/10/2026 10:00 (agenda seg–sex 9–17h, antecedência 2h)
+- name: agendar_caminho_feliz
+  steps:
+    - {user: "quero agendar", expect: ["seu nome"]}
+    - {user: "Maria Souza", expect: ["e-mail"]}
+    - {user: "maria@exemplo.com", expect: ["assunto"]}
+    - {user: "2", expect: ["horarios livres", "12:00"]}
+    - {user: "1", expect: ["Confirmo", "Maria Souza", "segunda, 05/10 às 12:00", "INEMA.PRO"]}
+    - {user: "sim", expect: ["Agendado", "Protocolo"]}
+  asserts: {appointments: 1, outbox: 2, events: {service_completed: 1}}
+
+- name: agendar_multi_slot
+  steps:
+    - user: "quero agendar, sou a Ana Lima, ana@exemplo.com, parceria, quinta às 10"
+      expect: ["Confirmo", "Ana Lima", "ana@exemplo.com", "quinta, 08/10 às 10:00", "Parceria"]
+    - {user: "sim", expect: ["Agendado"]}
+  asserts: {appointments: 1}
+
+- name: agendar_correcao
+  steps:
+    - {user: "quero agendar", expect: ["nome"]}
+    - {user: "Maria Souza", expect: ["e-mail"]}
+    - {user: "maria@exemplo.com", expect: ["assunto"]}
+    - {user: "1", expect: ["horarios"]}
+    - {user: "2", expect: ["Confirmo", "12:30"]}
+    - {user: "não, o e-mail é maria.souza@exemplo.com", expect: ["Corrigido", "email", "Confirmo", "maria.souza@exemplo.com"]}
+    - {user: "sim", expect: ["Agendado", "maria.souza@exemplo.com"]}
+  asserts: {appointments: 1}
+
+- name: agendar_cancelar
+  steps:
+    - {user: "quero agendar", expect: ["nome"]}
+    - {user: "Maria Souza", expect: ["e-mail"]}
+    - {user: "cancelar", expect: ["cancelei"]}
+  asserts: {appointments: 0, events: {service_cancelled: 1}}
+
+- name: agendar_retomar_apos_2_dias
+  steps:
+    - {user: "quero agendar", expect: ["nome"]}
+    - {user: "Maria Souza", expect: ["e-mail"]}
+    - {advance: "2d"}
+    - {user: "maria@exemplo.com", expect: ["Retomando", "nome", "assunto"]}
+    - {user: "3", expect: ["horarios"]}
+    - {user: "1", expect: ["Confirmo", "quarta, 07/10"]}
+    - {user: "sim", expect: ["Agendado"]}
+  asserts: {appointments: 1, events: {service_resumed: 1}}
+
+- name: agendar_duvida_no_meio
+  steps:
+    - {user: "quero agendar", expect: ["nome"]}
+    - {user: "Maria Souza", expect: ["e-mail"]}
+    - {user: "vocês atendem aos sábados?", expect: ["Voltando ao seu pedido", "e-mail"]}
+    - {user: "maria@exemplo.com", expect: ["assunto"]}
+  asserts: {events: {question_in_service: 1}}
+
+- name: agendar_horario_invalido
+  steps:
+    - {user: "quero agendar", expect: ["nome"]}
+    - {user: "Maria Souza", expect: ["e-mail"]}
+    - {user: "maria@exemplo.com", expect: ["assunto"]}
+    - {user: "1", expect: ["horarios"]}
+    - {user: "domingo às 15h", expect: ["não dá", "fora dos dias", "horarios livres"]}
+    - {user: "sexta às 20h", expect: ["não dá", "fora do horario"]}
+    - {user: "2", expect: ["Confirmo"]}
+    - {user: "sim", expect: ["Agendado"]}
+  asserts: {appointments: 1}
+
+- name: agendar_duplo_envio
+  steps:
+    - {user: "quero agendar", expect: ["nome"]}
+    - {user: "Maria Souza", expect: ["e-mail"]}
+    - {user: "maria@exemplo.com", expect: ["assunto"]}
+    - {user: "1", expect: ["horarios"]}
+    - {user: "1", expect: ["Confirmo"]}
+    - {user: "sim", msg_id: "wamid-123", expect: ["Agendado"]}
+    - {user: "sim", msg_id: "wamid-123", expect_silent: true}
+    - {user: "sim", expect_not: ["Agendado"]}
+  asserts: {appointments: 1, events: {duplicate_dropped: 1, service_completed: 1}}
+
+- name: fale_conosco
+  steps:
+    - {user: "quero fazer uma reclamação", expect: ["nome"]}
+    - {user: "Carlos Dias", expect: ["e-mail"]}
+    - {user: "carlos@exemplo.com", expect: ["mensagem"], expect_not: ["dúvida, reclamação ou sugestão"]}
+    - {user: "O link do curso está quebrado.", expect: ["Confirma", "O link do curso"]}
+    - {user: "sim", expect: ["Ticket"]}
+  asserts: {tickets: 1, outbox: 1}
+
+- name: handoff_pedido
+  steps:
+    - {user: "quero falar com um atendente", expect: ["protocolo"]}
+  asserts: {tickets: 1, events: {handoff: 1}}
+
+- name: aviso_dado_sensivel
+  steps:
+    - {user: "meu cpf é 529.982.247-25, tenho acesso?", expect: ["não envie CPF"]}
+  asserts: {events: {pii_warning: 1}}
+
+- name: sugerir_curso
+  steps:
+    - {user: "quero sugerir um curso", expect: ["tema"]}
+    - {user: "Automação de planilhas com agentes", expect: ["nível"]}
+    - {user: "iniciante", expect: ["e-mail"]}
+    - {user: "pular", expect: ["Confirma", "Automação de planilhas"]}
+    - {user: "sim", expect: ["Sugestão registrada"]}
+  asserts: {tickets: 1}

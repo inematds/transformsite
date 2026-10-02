@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Conversas{% endblock %}
+{% block body %}
+<h1>Conversas</h1>
+<p class="row">
+  Filtro:
+  <a href="/admin/conversas" class="{{ 'ok' if not status }}">todas</a>
+  <a href="/admin/conversas?status=bot" class="{{ 'ok' if status == 'bot' }}">com o bot</a>
+  <a href="/admin/conversas?status=human" class="{{ 'ok' if status == 'human' }}">com humano</a>
+</p>
+<div class="wrap"><table>
+  <tr><th>Atualizada</th><th>Canal</th><th>Usuário</th><th>Status</th><th>Serviço / slot</th><th>Última mensagem</th></tr>
+  {% for s in sessions %}
+  <tr>
+    <td><a href="/admin/conversas/{{ s.id }}">{{ s.updated_at|dt }}</a></td>
+    <td>{{ s.channel }}</td>
+    <td>{{ s.meta.get('name') or (s.user_id|mask) }}</td>
+    <td><span class="tag {{ s.status }}">{{ 'humano' if s.status == 'human' else 'bot' }}</span></td>
+    <td>{% if s.state.get('service') %}{{ s.state.service }} / {{ s.state.get('current') or s.state.get('phase') }}{% else %}<span class="mute">—</span>{% endif %}</td>
+    <td class="mute">{{ s.last }}</td>
+  </tr>
+  {% else %}
+  <tr><td colspan="6" class="mute">Nenhuma conversa ainda.</td></tr>
+  {% endfor %}
+</table></div>
+{% endblock %}

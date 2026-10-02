@@ -1,0 +1,90 @@
+# transformsite numa VPS: app + Ollama (LLM local) + Evolution API (WhatsApp) + Caddy (HTTPS automático)
+# Uso: ver deploy/vps/README.md  (resumo: cp .env.example .env && editar && docker compose up -d)
+name: transformsite
+
+services:
+  app:
+    build: ../..
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      TRANSFORMSITE_LLM_BASE_URL: http://ollama:11434
+    volumes:
+      - ${PROJECT_DIR:-./projeto}:/project
+    depends_on: [ollama]
+    expose: ["8000"]
+
+  ollama:
+    image: ollama/ollama:latest
+    restart: unless-stopped
+    volumes: [ollama:/root/.ollama]
+    expose: ["11434"]
+    # GPU NVIDIA (descomente se a VPS tiver GPU + nvidia-container-toolkit):
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices: [{driver: nvidia, count: all, capabilities: [gpu]}]
+
+  ollama-pull:  # baixa os modelos uma vez e sai
+    image: ollama/ollama:latest
+    depends_on: [ollama]
+    environment: {OLLAMA_HOST: "http://ollama:11434"}
+    entrypoint: ["/bin/sh", "-c", "ollama pull ${LLM_MODEL:-qwen2.5:7b} && ollama pull ${EMBED_MODEL:-bge-m3}"]
+    restart: "no"
+
+  evolution:
+    image: atendai/evolution-api:${EVOLUTION_VERSION:-v2.2.3}
+    restart: unless-stopped
+    profiles: ["whatsapp"]
+    environment:
+      SERVER_URL: https://${EVOLUTION_DOMAIN}
+      AUTHENTICATION_API_KEY: ${EVOLUTION_API_KEY}
+      DATABASE_ENABLED: "true"
+      DATABASE_PROVIDER: postgresql
+      DATABASE_CONNECTION_URI: postgresql://evolution:${EVOLUTION_DB_PASSWORD}@evolution-db:5432/evolution
+      DATABASE_CONNECTION_CLIENT_NAME: evolution
+      CACHE_REDIS_ENABLED: "true"
+      CACHE_REDIS_URI: redis://evolution-redis:6379/6
+      CACHE_LOCAL_ENABLED: "false"
+      WEBHOOK_GLOBAL_ENABLED: "false"
+      CONFIG_SESSION_PHONE_CLIENT: transformsite
+    volumes: [evolution_instances:/evolution/instances]
+    depends_on: [evolution-db, evolution-redis]
+    expose: ["8080"]
+
+  evolution-db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    profiles: ["whatsapp"]
+    environment:
+      POSTGRES_USER: evolution
+      POSTGRES_PASSWORD: ${EVOLUTION_DB_PASSWORD}
+      POSTGRES_DB: evolution
+    volumes: [evolution_db:/var/lib/postgresql/data]
+
+  evolution-redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    profiles: ["whatsapp"]
+    volumes: [evolution_redis:/data]
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports: ["80:80", "443:443"]
+    environment:
+      DOMAIN: ${DOMAIN}
+      EVOLUTION_DOMAIN: ${EVOLUTION_DOMAIN:-evolution.localhost}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on: [app]
+
+volumes:
+  ollama:
+  evolution_instances:
+  evolution_db:
+  evolution_redis:
+  caddy_data:
+  caddy_config:

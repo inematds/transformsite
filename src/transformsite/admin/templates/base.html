@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% if csrf %}<meta name="csrf-token" content="{{ csrf }}">{% endif %}
+<title>{% block title %}Painel{% endblock %} · {{ name }}</title>
+<style>
+:root{--bg:#0f1115;--panel:#171a21;--line:#2a2f3a;--text:#e6e8ee;--mute:#9aa3b2;--acc:#f5a524;--ok:#3ecf8e;--bad:#ff6b6b;--info:#5aa9ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--info);text-decoration:none}a:hover{text-decoration:underline}
+header{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);background:var(--panel)}
+header b{color:var(--acc);margin-right:8px}
+nav a{color:var(--mute);padding:6px 10px;border-radius:6px;display:inline-block}
+nav a.on{color:var(--text);background:#232836}
+main{padding:16px;max-width:1200px;margin:0 auto}
+h1{font-size:20px;margin:4px 0 14px}h2{font-size:16px;margin:18px 0 8px}
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+th,td{padding:7px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{color:var(--mute);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.03em}
+.wrap{overflow-x:auto}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:0 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-bottom:12px}
+.k{color:var(--mute);font-size:12px}.v{font-size:20px;font-weight:600}
+.tag{display:inline-block;padding:1px 8px;border-radius:99px;font-size:12px;border:1px solid var(--line)}
+.tag.human,.tag.pending,.tag.open{color:var(--acc);border-color:var(--acc)}
+.tag.bot,.tag.approved{color:var(--ok);border-color:var(--ok)}
+.tag.err,.tag.erro{color:var(--bad);border-color:var(--bad)}
+.mute{color:var(--mute)}.bad{color:var(--bad)}.ok{color:var(--ok)}
+button,.btn{background:#232836;color:var(--text);border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer;font:inherit}
+button:hover{border-color:var(--acc)}button.pri{background:var(--acc);color:#111;border-color:var(--acc);font-weight:600}
+button.small{padding:2px 8px;font-size:12px}
+input,textarea,select{background:#0b0d11;color:var(--text);border:1px solid var(--line);border-radius:6px;padding:7px 9px;font:inherit}
+textarea{width:100%;min-height:70px}
+form.inline{display:inline}
+.flash{background:#1c2a1f;border:1px solid var(--ok);padding:8px 12px;border-radius:6px;margin-bottom:12px}
+.warn{background:#2a2217;border:1px solid var(--acc);padding:8px 12px;border-radius:6px;margin-bottom:12px}
+.msg{padding:8px 10px;border-radius:8px;margin:6px 0;max-width:80%;white-space:pre-wrap;word-wrap:break-word}
+.msg.in{background:#1d2330;margin-right:auto}
+.msg.out{background:#1b2a24;margin-left:auto}
+.msg.human{background:#2d2616;margin-left:auto;border:1px solid var(--acc)}
+.meta{font-size:11px;color:var(--mute);margin-bottom:2px}
+pre{background:#0b0d11;border:1px solid var(--line);border-radius:6px;padding:10px;overflow:auto;font-size:12px}
+.bar{background:var(--acc);height:10px;border-radius:3px;min-width:1px}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+@media (max-width:700px){.msg{max-width:100%}main{padding:12px}}
+</style>
+</head>
+<body>
+<header>
+  <b>transformsite</b><span class="mute">{{ org }}</span>
+  {% if tab is defined %}
+  <nav>
+    <a href="/admin/conversas" class="{{ 'on' if tab == 'conversas' }}">Conversas</a>
+    <a href="/admin/fila" class="{{ 'on' if tab == 'fila' }}">Fila</a>
+    <a href="/admin/servicos" class="{{ 'on' if tab == 'servicos' }}">Serviços</a>
+    <a href="/admin/kb" class="{{ 'on' if tab == 'kb' }}">Base de conhecimento</a>
+    <a href="/admin/metricas" class="{{ 'on' if tab == 'metricas' }}">Métricas</a>
+    {% if not no_token %}<a href="/admin/logout">Sair</a>{% endif %}
+  </nav>
+  {% endif %}
+</header>
+<main>
+{% if no_token %}<div class="warn">Sem token de painel ({{ token_env }} não definido ou com o valor de exemplo): acesso liberado só a partir de 127.0.0.1. Defina {{ token_env }} no .env antes de expor o servidor.</div>{% endif %}
+{% if msg %}<div class="flash">{{ msg }}</div>{% endif %}
+{% block body %}{% endblock %}
+</main>
+</body>
+</html>
