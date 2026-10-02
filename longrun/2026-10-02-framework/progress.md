@@ -8,3 +8,4 @@
 - 10:30 F3 pronta (11/11 cenários × 6 canais); F4 pronta (97,9% campos)
 - 10:33 golden 2ª rodada: 92,6% / 100% / 100% — PASS
 - 10:36 bug horário "de carona" corrigido + cenário; 13/13 real-LLM; docker build ok; wheel em venv limpo ok
+- 10:57 portal publicado (3 repos) + EN/ES
