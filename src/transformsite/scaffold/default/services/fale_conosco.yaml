@@ -1,0 +1,32 @@
+service: fale_conosco
+version: 1
+review: approved
+intent:
+  description: "Enviar uma mensagem para a equipe"
+  examples:
+    - "fale conosco"
+    - "quero reclamar"
+    - "tenho uma sugestão"
+    - "quero enviar uma mensagem"
+    - "contato com a equipe"
+  keywords: ["reclamação", "sugestão", "contato"]
+auth: none
+legal_basis: legitimo_interesse
+slots:
+  - {name: nome, type: text, prompt: "Seu nome?"}
+  - {name: email, type: email, prompt: "E-mail para resposta?", prefill_from: channel.user_email}
+  - name: assunto
+    type: enum
+    values: [duvida, reclamacao, sugestao, outro]
+    labels: {duvida: "Dúvida", reclamacao: "Reclamação", sugestao: "Sugestão", outro: "Outro"}
+    synonyms: {reclamacao: ["reclamar", "problema"], sugestao: ["sugerir", "ideia"]}
+    prompt: "É dúvida, reclamação ou sugestão?"
+  - {name: mensagem, type: text, prompt: "Pode escrever sua mensagem.", max_len: 2000}
+confirm:
+  template: "Envio {assunto} de {nome} ({email}): \"{mensagem|trunc80}\". Confirma?"
+action:
+  tool: crm.criar_ticket
+  args: {from: "{email}", subject: "[{assunto}] {nome}", body: "{mensagem}", queue: atendimento}
+  idempotency_key: "{session_id}:fale_conosco:{mensagem|trunc80}"
+on_success:
+  reply: "Recebido! Ticket {result.id}. Respondemos em até 2 dias úteis no seu e-mail."

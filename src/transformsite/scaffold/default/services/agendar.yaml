@@ -1,0 +1,51 @@
+service: agendar
+version: 1
+review: approved
+intent:
+  description: "Agendar um atendimento"
+  examples:
+    - "quero agendar"
+    - "marcar horário"
+    - "agendar uma conversa"
+    - "agendar atendimento"
+    - "quero marcar uma reunião"
+  keywords: ["agendar", "agendamento", "marcar horario"]
+auth: none
+legal_basis: contrato
+slots:
+  - name: nome
+    type: text
+    prompt: "Qual é o seu nome?"
+  - name: email
+    type: email
+    prompt: "Qual e-mail para eu enviar o convite?"
+    prefill_from: channel.user_email
+  - name: motivo
+    type: enum
+    values: [duvida_geral, suporte, parceria, outro]
+    labels: {duvida_geral: "Dúvida geral", suporte: "Suporte", parceria: "Parceria", outro: "Outro"}
+    synonyms: {duvida_geral: ["duvida", "duvidas"], suporte: ["ajuda", "problema", "acesso"], parceria: ["parceiro", "patrocinio"]}
+    prompt: "Qual o assunto?"
+  - name: detalhe
+    type: text
+    required: false
+    when: "{motivo} == outro"
+    prompt: "Conte em uma frase o assunto."
+  - name: data_hora
+    type: datetime
+    prompt: "Qual dia e horário prefere?"
+    options_from: tool:agenda.slots_livres
+    constraints: {validate_tool: agenda.validar_horario, options: 3}
+confirm:
+  template: "Confirmo: atendimento para {nome} ({email}) em {data_hora|fmt_br}, assunto: {motivo}. Está certo?"
+action:
+  tool: agenda.criar_evento
+  args: {title: "Atendimento – {nome}", start: "{data_hora}", email: "{email}", name: "{nome}", notes: "{motivo} {detalhe}"}
+  idempotency_key: "{session_id}:{data_hora}"
+on_success:
+  reply: "Agendado! Protocolo {result.id}. O convite foi enviado para {email}."
+on_failure:
+  reply: "Não consegui agendar agora."
+  handoff: {queue: atendimento}
+handoff:
+  queue: atendimento
