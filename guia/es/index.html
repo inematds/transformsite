@@ -178,7 +178,7 @@
 <span class="k">pipx install</span> git+https://github.com/inematds/transformsite</pre></div>
     <div class="card"><h3>Ollama (LLM local)</h3><p>Modelo de chat + embeddings <code>bge-m3</code>. Sin GPU: <code>qwen2.5:7b</code>.</p><pre><span class="k">ollama pull</span> qwen3.6:35b-a3b
 <span class="k">ollama pull</span> bge-m3</pre></div>
-    <div class="card"><h3>O: tu suscripción</h3><p>En <code>transformsite.yaml</code>, usa Claude Code o Codex CLI ya iniciados, sin clave de API.</p><pre><span class="c"># transformsite.yaml</span>
+    <div class="card"><h3>O: tu suscripción (experimental)</h3><p>En <code>transformsite.yaml</code>, usa Claude Code o Codex CLI ya iniciados, sin clave de API.</p><pre><span class="c"># transformsite.yaml</span>
 llm:
   provider: claude_cli   <span class="c"># o codex_cli</span></pre></div>
   </div>
@@ -229,7 +229,7 @@ action: {tool: agenda.criar_evento, idempotency_key: <span class="s">"{session_i
     <p>Ejecuta las preguntas de prueba y los guiones de conversación. <code>golden</code> genera un borrador de preguntas a partir de tu propia base para que lo revises.</p>
 <pre><span class="k">transformsite golden</span> --n 50                <span class="c"># borrador → revisa → tests/golden.jsonl</span>
 <span class="k">transformsite eval</span> --golden tests/golden.jsonl   <span class="c"># cita válida, "no sé", inyección</span>
-<span class="k">transformsite eval</span> --scenarios tests/cenarios --real-llm   <span class="c"># 12/12 en el piloto</span></pre>
+<span class="k">transformsite eval</span> --scenarios tests/cenarios --real-llm   <span class="c"># 13/13 en el piloto</span></pre>
   </div></div>
 
   <div class="step"><div class="b">6</div><div>

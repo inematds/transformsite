@@ -9,3 +9,4 @@
 - 10:33 golden 2ª rodada: 92,6% / 100% / 100% — PASS
 - 10:36 bug horário "de carona" corrigido + cenário; 13/13 real-LLM; docker build ok; wheel em venv limpo ok
 - 10:57 portal publicado (3 repos) + EN/ES
+- 11:05 teste ao vivo claude_cli/codex_cli → "não sei"; marcados experimentais; guia 13/13

@@ -48,7 +48,7 @@ transformsite chat               # conversación en la terminal
 transformsite serve              # widget en /chat, panel en /admin, canales configurados
 ```
 
-¿Sin GPU? Usa un modelo más pequeño (`qwen2.5:7b`, `llama3.1:8b`) o `llm.provider: claude_cli` / `codex_cli`.
+¿Sin GPU? Usa un modelo más pequeño (`qwen2.5:7b`, `llama3.1:8b`) o `llm.provider: claude_cli` / `codex_cli` (experimental: corren sin errores pero, en el piloto, aún respondieron "no sé" donde Ollama acierta — en investigación).
 
 ## Comandos
 
