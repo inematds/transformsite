@@ -57,6 +57,9 @@ def configured_channels(cfg: ProjectConfig) -> list[str]:
     prov = ch.whatsapp.get("provider")
     if prov and os.environ.get(ch.whatsapp.get("apikey_env") or ch.whatsapp.get("token_env") or "EVOLUTION_API_KEY"):
         names.append("whatsapp_cloud" if prov == "cloud" else "whatsapp")
+    wc = getattr(ch, "whatsapp_cloud", None) or {}
+    if wc.get("phone_number_id") and os.environ.get(wc.get("token_env") or "WHATSAPP_CLOUD_TOKEN") and "whatsapp_cloud" not in names:
+        names.append("whatsapp_cloud")
     if ch.email.get("enabled"):
         names.append("email")
     return names

@@ -446,3 +446,14 @@ Tudo sai de `transformsite report --since 7d` (CSV) e do painel (F5).
 - **Autenticação nível 2/3:** OTP por e-mail basta, ou há sistema legado com login que precisa ser integrado já na Fase 2?
 - **Sistema legado:** há algum endpoint/API real para `legado.*`, ou o conversor deve começar só com `http.post_form` (POST no formulário antigo)?
 - **Repositório:** criar `inematds/transformsite` (default) ou outra conta? Licença aberta (MIT/Apache-2)?
+
+---
+
+## Nota de implementação (2026-10-02)
+
+- O framework foi implementado em Python puro; a premissa de reaproveitar o gateway/fila do `inemaccbot` (TypeScript) foi descartada — fila/estado ficaram em SQLite WAL próprio (`store.py`).
+- Agenda: o padrão virou a **agenda local** (SQLite + horário comercial + convite `.ics`), sem API; Cal.com ficou como adaptador opcional.
+- WhatsApp: **Evolution API self-hosted** como padrão (pedido do usuário) + Cloud API oficial opcional; deploy completo em `deploy/vps`.
+- F4 medida com 13 formulários de exemplo (o inema.club só tem o formulário de busca).
+- v2 (imagem Docker "assada" com a base e os serviços) está no [ROADMAP](ROADMAP.md).
+- Resultados do piloto: [pilot/RESULTADOS.md](pilot/RESULTADOS.md).

@@ -96,3 +96,10 @@
   steps:
     - {user: "meu cpf é 529.982.247-25, tenho acesso?", expect: ["não envie CPF"]}
   asserts: {events: {pii_warning: 1}}
+
+- name: agendar_horario_de_carona_invalido
+  # o horário chega junto com outro dado (não é o campo perguntado) e cai num domingo
+  steps:
+    - {user: "quero agendar", expect: ["nome"]}
+    - {user: "sou o Pedro Alves, pedro@exemplo.com, domingo às 10h", expect: ["não dá", "fora dos dias"], expect_not: ["Confirmo"]}
+  asserts: {appointments: 0}

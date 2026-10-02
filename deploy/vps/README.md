@@ -46,7 +46,7 @@ docker compose exec app transformsite ingest
 Depois abra `https://whats.SEU_DOMINIO/manager`, entre com a `EVOLUTION_API_KEY` e leia o QR Code com o
 WhatsApp do número de atendimento. **Atenção:** a Evolution usa o WhatsApp Web (não oficial) — há risco de
 bloqueio do número em uso abusivo. Para operação crítica, use a Cloud API oficial da Meta
-(`channels.whatsapp.provider: cloud`).
+(`channels.whatsapp_cloud`).
 
 ## Telegram
 

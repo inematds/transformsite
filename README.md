@@ -1,11 +1,17 @@
 # transformsite
 
+[![transformsite — seu site vira chat](guia/assets/banner.jpg)](https://inematds.github.io/transformsite/guia/)
+
+**🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
+
 **Transforme seu site e sua base de conhecimento em um agente de atendimento por chat.**
 O site vira a fonte de verdade; o cliente conversa por **WhatsApp, Telegram, e-mail ou widget no site**.
 O agente **responde citando a fonte** (ou diz "não sei" e passa para a equipe) e **executa serviços**
 (agendar, fale conosco, segunda via…) coletando os dados por conversa, em vez de formulários.
 
-🇧🇷 Português · [🇺🇸 English](README.en.md) · [🇪🇸 Español](README.es.md) · 📘 [Guia](https://inematds.github.io/transformsite/guia/) · 🗺️ [Roadmap](ROADMAP.md)
+## 📖 Guia de uso
+
+Guia completo (landing + passo a passo): **https://inematds.github.io/transformsite/guia/** · 🗺️ [Roadmap](ROADMAP.md)
 
 > Inspiração: o **America.gov** (2026) juntou o conteúdo de ~29 mil sites do governo americano num único
 > ponto de entrada conversacional — primeiro perguntas com fonte, depois transações. O transformsite é a
@@ -96,7 +102,7 @@ Ferramentas próprias: crie `tools/minha.py` com `register(registry)` — veja `
 | Widget web | ligado por padrão: `<script src="https://SEU_DOMINIO/widget.js"></script>` |
 | Telegram | `TELEGRAM_BOT_TOKEN` no `.env` (crie o bot no @BotFather) |
 | WhatsApp (Evolution API, self-hosted) | `channels.whatsapp` + `EVOLUTION_API_KEY`; webhook `POST /webhook/whatsapp` |
-| WhatsApp (Cloud API oficial) | `channels.whatsapp.provider: cloud` + token Meta; webhook `/webhook/whatsapp-cloud` |
+| WhatsApp (Cloud API oficial) | `channels.whatsapp_cloud` (`phone_number_id`, `token_env`, `verify_token`); webhook `/webhook/whatsapp-cloud` |
 | E-mail | `channels.email.enabled: true` + IMAP/SMTP |
 
 Handoff humano: `handoff.targets` (`panel`, `email:...`, `telegram:<chat_id>`). No painel, um atendente
@@ -115,8 +121,9 @@ Sobe com Docker Compose: **app + Ollama + Evolution API (WhatsApp) + Caddy (HTTP
 ## Piloto: INEMA.CLUB
 
 A pasta [`pilot/`](pilot/) é o projeto real usado para validar o framework com o site
-[inema.club](https://www.inema.club): inventário, golden set e resultados de avaliação em
-[`pilot/RESULTADOS.md`](pilot/RESULTADOS.md).
+[inema.club](https://www.inema.club): 386 páginas → 1.512 trechos; com 73 perguntas de teste e LLM local,
+**92,6%** de respostas com fonte válida, **100%** de "não sei" fora do escopo, **100%** de injeção
+bloqueada, p95 de 2,6 s; **13/13** roteiros de conversa. Detalhes em [`pilot/RESULTADOS.md`](pilot/RESULTADOS.md).
 
 ## Desenvolvimento
 

@@ -331,11 +331,6 @@ class Agent:
         # a própria frase inicial pode já trazer dados ("quero agendar quinta às 10")
         self._extract_into(svc, state, msg.text, current=None, initial=True)
         intro = OutMsg(f"Certo, vamos a {svc.intent.description.lower()}. Para cancelar a qualquer momento, diga \"cancelar\".", kind="service")
-        for s in svc.slots:
-            if s.name in state["slots"] and s.constraints.get("validate_tool"):
-                v = self._validate_with_tool(sess, svc, s, state)
-                if v:
-                    return [intro] + v
         return [intro] + self._next(sess, svc, state)
 
     def _active_slots(self, svc: Service, state: dict) -> list[Slot]:
@@ -354,6 +349,14 @@ class Agent:
     def _next(self, sess: dict, svc: Service, state: dict, pre: list[OutMsg] | None = None) -> list[OutMsg]:
         sid = sess["id"]
         outs = list(pre or [])
+        # validação via ferramenta (ex.: horário livre) de todo slot preenchido, venha de onde vier
+        validated = state.setdefault("validated", {})
+        for s in self._active_slots(svc, state):
+            if s.name in state["slots"] and s.constraints.get("validate_tool") and validated.get(s.name) != state["slots"][s.name]:
+                v = self._validate_with_tool(sess, svc, s, state)
+                if v:
+                    return outs + v
+                validated[s.name] = state["slots"][s.name]
         # autenticação OTP antes dos slots sensíveis
         if state.get("auth_ok") is False:
             ident = svc.auth.get("identifier") if isinstance(svc.auth, dict) else None
@@ -501,11 +504,6 @@ class Agent:
         correction = bool(re.match(r"^(nao|na verdade|errei|corrig)", _n(text)))
         changed = self._extract_into(svc, state, text, current=cur, correction=correction)
         new = set(state["slots"]) - filled_before
-        # validação via ferramenta (ex.: horário livre)
-        if cur and cur.name in new and cur.constraints.get("validate_tool"):
-            v = self._validate_with_tool(sess, svc, cur, state)
-            if v:
-                return v
         if cur and cur.name not in state["slots"]:
             if not new and not changed and self._looks_question(text):
                 return self._answer_inline(sess, svc, state, text)

@@ -105,3 +105,9 @@
     - {user: "pular", expect: ["Confirma", "Automação de planilhas"]}
     - {user: "sim", expect: ["Sugestão registrada"]}
   asserts: {tickets: 1}
+
+- name: agendar_horario_de_carona_invalido
+  steps:
+    - {user: "quero agendar", expect: ["nome"]}
+    - {user: "sou o Pedro Alves, pedro@exemplo.com, domingo às 10h", expect: ["não dá", "fora dos dias"], expect_not: ["Confirmo"]}
+  asserts: {appointments: 0}
