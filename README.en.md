@@ -20,10 +20,10 @@ Full guide (landing + step by step): **https://inematds.github.io/transformsite/
 ## How it works
 
 ```
-site + docs ──ingest──► índice (BM25 + vetores) ──► RAG com citação ─┐
-formulários legados ──convert──► services/*.yaml ──► máquina de slots ┼──► Telegram · WhatsApp · e-mail · widget
-                                         ferramentas (agenda, tickets, POST no legado, webhook) ┘
-                                         handoff humano + painel admin + métricas
+site + docs ──ingest──► index (BM25 + vectors) ──► RAG with citations ─┐
+legacy forms ──convert──► services/*.yaml ──► slot machine ─────────────┼──► Telegram · WhatsApp · email · widget
+                              tools (calendar, tickets, POST to legacy, webhook) ┘
+                              human handoff + admin panel + metrics
 ```
 
 - **Everything local by default**: LLM on [Ollama](https://ollama.com) (or vLLM/LM Studio), `bge-m3` embeddings,
@@ -37,15 +37,15 @@ formulários legados ──convert──► services/*.yaml ──► máquina d
 ## Quick install (5 minutes)
 
 ```bash
-pipx install git+https://github.com/inematds/transformsite      # ou: pip install .
-ollama pull qwen3.6:35b-a3b && ollama pull bge-m3                # qualquer modelo instruct serve (ex.: qwen2.5:7b)
+pipx install git+https://github.com/inematds/transformsite      # or: pip install .
+ollama pull qwen3.6:35b-a3b && ollama pull bge-m3                # any instruct model works (e.g. qwen2.5:7b)
 
 transformsite init meubot --org "Minha Empresa" --url https://www.minhaempresa.com.br --contact atendimento@minhaempresa.com.br
 cd meubot
-transformsite inventory          # Fase 0: páginas e formulários do site → inventario/*.csv
-transformsite ingest             # Fase 1: lê o site inteiro + docs/ → kb/index.sqlite
-transformsite chat               # conversa no terminal
-transformsite serve              # widget em /chat, painel em /admin, canais configurados
+transformsite inventory          # Phase 0: site pages and forms → inventario/*.csv
+transformsite ingest             # Phase 1: reads the whole site + docs/ → kb/index.sqlite
+transformsite chat               # chat in the terminal
+transformsite serve              # widget at /chat, dashboard at /admin, configured channels
 ```
 
 No GPU? Use a smaller model (`qwen2.5:7b`, `llama3.1:8b`) or `llm.provider: claude_cli` / `codex_cli`.
@@ -70,7 +70,7 @@ No GPU? Use a smaller model (`qwen2.5:7b`, `llama3.1:8b`) or `llm.provider: clau
 
 ```yaml
 service: agendar
-review: approved            # serviços convertidos nascem "pending" e só sobem após aprovação
+review: approved            # converted services are born "pending" and only go live after approval
 intent:
   description: "Agendar um atendimento"
   examples: ["quero agendar", "marcar horário"]
@@ -80,7 +80,7 @@ slots:
   - name: data_hora
     type: datetime
     prompt: "Qual dia e horário prefere?"
-    options_from: tool:agenda.slots_livres          # oferece horários livres como botões
+    options_from: tool:agenda.slots_livres          # offers free slots as buttons
     constraints: {validate_tool: agenda.validar_horario}
 confirm: {template: "Confirmo {nome} em {data_hora|fmt_br}?"}
 action:
@@ -129,7 +129,7 @@ blocked, p95 of 2.6 s; **13/13** conversation scripts. Details in [`pilot/RESULT
 
 ```bash
 uv venv && uv pip install -e '.[dev]'
-pytest -q                       # sem rede, LLM falso determinístico
+pytest -q                       # no network, deterministic fake LLM
 ```
 
 MIT License · made by [INEMA](https://www.inema.club) — open and free content.

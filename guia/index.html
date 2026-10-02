@@ -78,7 +78,7 @@
   .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
   .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
   .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
-  .grid>*,.step>div{min-width:0}
+  .grid>*,.step>div,.phase .d{min-width:0;overflow-wrap:anywhere}
   pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0}
   pre .c{color:#6f6f7c} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
   .step{display:grid;grid-template-columns:46px 1fr;gap:16px;margin-bottom:26px}
@@ -99,7 +99,6 @@
   .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3em .8em;font-size:.78rem;color:var(--mut);margin:0 4px}
 </style>
 </head>
-<body>
 <body>
 
 <nav><div class="wrap">
@@ -187,7 +186,7 @@ llm:
 
 <section id="guia"><div class="wrap">
   <span class="chip">Guia de uso · passo a passo</span>
-  <h2>Do zero ao bot respondendo em 6 passos</h2>
+  <h2>Do zero ao bot respondendo em 7 passos</h2>
   <p class="sub">Comandos reais, os mesmos usados no piloto com o site inema.club.</p>
 
   <div class="step"><div class="b">1</div><div>
